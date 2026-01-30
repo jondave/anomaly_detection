@@ -1,0 +1,3 @@
+model_path: msvdd_model.pt
+window_size: 10
+threshold: 0.5
