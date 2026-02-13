@@ -527,12 +527,27 @@ def main():
     parser.add_argument(
         '--device',
         type=str,
-        default='cuda' if torch.cuda.is_available() else 'cpu',
+        default='cpu',
         choices=['cuda', 'cpu'],
-        help='Device to train on (default: cuda if available)'
+        help='Device to train on (default: cpu)'
     )
     
     args = parser.parse_args()
+    
+    # Validate CUDA availability and compatibility
+    if args.device == 'cuda':
+        try:
+            if not torch.cuda.is_available():
+                print("⚠ CUDA is not available. Falling back to CPU.")
+                args.device = 'cpu'
+            else:
+                # Test if CUDA actually works with a simple operation
+                test_tensor = torch.zeros(1).cuda()
+                del test_tensor
+        except (RuntimeError, torch.cuda.device.RuntimeError) as e:
+            print(f"⚠ CUDA is not compatible with your GPU: {e}")
+            print("Falling back to CPU for training...")
+            args.device = 'cpu'
     
     # Set random seed for reproducibility
     torch.manual_seed(42)
@@ -600,6 +615,7 @@ def main():
     
     # Initialize trainer
     device = torch.device(args.device)
+    
     trainer = GNNTrainer(
         model=model,
         device=device,

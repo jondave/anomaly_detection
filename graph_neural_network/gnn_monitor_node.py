@@ -33,7 +33,7 @@ import os
 import sys
 from pathlib import Path
 from collections import deque
-from typing import List, Optional, Deque
+from typing import List, Optional, Deque, Tuple
 import numpy as np
 
 import rclpy
@@ -45,9 +45,6 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float32, Bool, String
-
-# Message filters for synchronization
-import message_filters
 
 # PyTorch
 import torch
@@ -88,7 +85,7 @@ class GNNAnomalyMonitor(Node):
         # ===== Node Parameters =====
         self.declare_parameter('model_path', 'gnn_checkpoint.pth')
         self.declare_parameter('window_size', 50)
-        self.declare_parameter('anomaly_threshold', 0.1)
+        self.declare_parameter('anomaly_threshold', 0.3)
         self.declare_parameter('device', 'cpu')
         self.declare_parameter('sensor_names', [
             'cmd_vel.linear.x',
@@ -118,6 +115,10 @@ class GNNAnomalyMonitor(Node):
         self.get_logger().info(f"Anomaly threshold: {self.anomaly_threshold}")
         self.get_logger().info(f"Number of sensors: {self.num_sensors}")
         self.get_logger().info(f"Device: {self.device_name}")
+        self.get_logger().info("")
+        self.get_logger().info("To adjust anomaly threshold at runtime:")
+        self.get_logger().info(f"  ros2 param set /gnn_anomaly_monitor anomaly_threshold 0.5")
+        self.get_logger().info("=" * 70)
         
         # ===== Load Pre-trained GNN Model =====
         self.device = torch.device(self.device_name)
@@ -135,44 +136,45 @@ class GNNAnomalyMonitor(Node):
         self.anomaly_scores: List[float] = []
         self.anomaly_detected = False
         
-        # ===== ROS 2 Subscribers (Message Filters for Synchronization) =====
+        # ===== Manual Message Buffers for Synchronization =====
+        # Store (timestamp, message) tuples
+        self.cmd_vel_buffer: Deque[Tuple[float, Twist]] = deque(maxlen=100)
+        self.imu_buffer: Deque[Tuple[float, Imu]] = deque(maxlen=100)
+        self.odom_buffer: Deque[Tuple[float, Odometry]] = deque(maxlen=100)
+        
+        # Synchronization tolerance (seconds)
+        self.sync_tolerance = 0.2
+        
+        # ===== ROS 2 Subscribers (Individual Subscriptions for Manual Sync) =====
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             history=HistoryPolicy.KEEP_LAST,
             depth=10
         )
         
-        self.cmd_vel_sub = message_filters.Subscriber(
-            self,
+        self.cmd_vel_sub = self.create_subscription(
             Twist,
             '/cmd_vel',
+            self.cmd_vel_callback,
             qos_profile=qos_profile
         )
         
-        self.imu_sub = message_filters.Subscriber(
-            self,
+        self.imu_sub = self.create_subscription(
             Imu,
             '/imu/data_raw',
+            self.imu_callback,
             qos_profile=qos_profile
         )
         
-        self.odom_sub = message_filters.Subscriber(
-            self,
+        self.odom_sub = self.create_subscription(
             Odometry,
             '/odom',
+            self.odom_callback,
             qos_profile=qos_profile
         )
         
-        # Approximate Time Synchronizer
-        # Allows small time differences between sensor messages
-        # allow_headerless=True handles Twist messages without header
-        self.sync = message_filters.ApproximateTimeSynchronizer(
-            [self.cmd_vel_sub, self.imu_sub, self.odom_sub],
-            queue_size=10,
-            slop=0.1,  # 100ms tolerance
-            allow_headerless=True
-        )
-        self.sync.registerCallback(self.sensor_callback)
+        # Timer to attempt synchronization
+        self.sync_timer = self.create_timer(0.01, self.attempt_sync)
         
         # ===== ROS 2 Publishers =====
         self.anomaly_score_pub = self.create_publisher(
@@ -197,6 +199,9 @@ class GNNAnomalyMonitor(Node):
         self.get_logger().info("Node initialized successfully!")
         self.get_logger().info(f"Warming up buffer (need {self.window_size} samples)...")
         self.get_logger().info("=" * 70)
+        
+        # Add parameter callback for dynamic threshold adjustment
+        self.add_on_set_parameters_callback(self._on_parameter_changed)
     
     def _load_model(self) -> SensorRelationGNN:
         """
@@ -244,6 +249,74 @@ class GNNAnomalyMonitor(Node):
         except Exception as e:
             self.get_logger().error(f"Failed to load model: {str(e)}")
             sys.exit(1)
+    
+    def _on_parameter_changed(self, params):
+        """
+        Callback for parameter changes (e.g., anomaly_threshold).
+        
+        Allows dynamic adjustment of threshold without restarting the node.
+        """
+        from rcl_interfaces.msg import SetParametersResult
+        
+        for param in params:
+            if param.name == 'anomaly_threshold':
+                old_threshold = self.anomaly_threshold
+                self.anomaly_threshold = param.value
+                self.get_logger().info(
+                    f"📊 Anomaly threshold updated: {old_threshold:.3f} → {self.anomaly_threshold:.3f}"
+                )
+                return SetParametersResult(successful=True)
+        
+        return SetParametersResult(successful=True)
+    
+    def cmd_vel_callback(self, msg: Twist):
+        """Callback for /cmd_vel messages."""
+        timestamp = self.get_clock().now().nanoseconds / 1e9
+        self.cmd_vel_buffer.append((timestamp, msg))
+    
+    def imu_callback(self, msg: Imu):
+        """Callback for /imu/data_raw messages."""
+        timestamp = self.get_clock().now().nanoseconds / 1e9
+        self.imu_buffer.append((timestamp, msg))
+    
+    def odom_callback(self, msg: Odometry):
+        """Callback for /odom messages."""
+        timestamp = self.get_clock().now().nanoseconds / 1e9
+        self.odom_buffer.append((timestamp, msg))
+    
+    def attempt_sync(self):
+        """Attempt to find synchronized messages from all three topics."""
+        # Need at least one message from each topic
+        if not self.cmd_vel_buffer or not self.imu_buffer or not self.odom_buffer:
+            return
+        
+        # Use the most recent imu message as reference point
+        imu_time, imu_msg = self.imu_buffer[-1]
+        
+        # Find cmd_vel and odom messages closest in time to imu
+        cmd_vel_match = None
+        odom_match = None
+        
+        # Find best cmd_vel match
+        for cv_time, cv_msg in self.cmd_vel_buffer:
+            if abs(cv_time - imu_time) <= self.sync_tolerance:
+                if cmd_vel_match is None or abs(cv_time - imu_time) < abs(cmd_vel_match[0] - imu_time):
+                    cmd_vel_match = (cv_time, cv_msg)
+        
+        # Find best odom match
+        for odom_time, odom_msg in self.odom_buffer:
+            if abs(odom_time - imu_time) <= self.sync_tolerance:
+                if odom_match is None or abs(odom_time - imu_time) < abs(odom_match[0] - imu_time):
+                    odom_match = (odom_time, odom_msg)
+        
+        # If we found matches for all three, process them
+        if cmd_vel_match is not None and odom_match is not None:
+            self.sensor_callback(cmd_vel_match[1], imu_msg, odom_match[1])
+            
+            # Clean up old messages to save memory
+            self.cmd_vel_buffer.clear()
+            self.imu_buffer.clear()
+            self.odom_buffer.clear()
     
     def extract_features(
         self,

@@ -1,0 +1,44 @@
+======================================================================
+ANOMALY SCORE ANALYSIS
+======================================================================
+
+Basic Statistics (11253 samples):
+  Mean:     0.0230
+  Std Dev:  0.0601
+  Min:      0.0000
+  Max:      4.1797
+
+Percentiles:
+  50th:     0.0100
+  75th:     0.0255
+  90th:     0.0536
+  95th:     0.0797
+  99th:     0.2035
+
+======================================================================
+RECOMMENDED THRESHOLDS
+======================================================================
+
+Based on 11253 samples of normal operation:
+  🟢 Sensitive   (90th %ile):  0.0536
+  🟡 Moderate    (95th %ile):  0.0797  ← Recommended
+  🔴 Conservative (99th %ile): 0.2035
+
+How many samples exceeded each threshold:
+  0.0536: 1126 samples (10.0%)
+  0.0797:  563 samples (5.0%)
+  0.2035:  113 samples (1.0%)
+
+======================================================================
+NEXT STEPS
+======================================================================
+
+1. Start with recommended threshold: 0.0797
+   ros2 param set /gnn_anomaly_monitor anomaly_threshold 0.0797
+
+2. Test with actual driving
+   ros2 run anomaly_detection gnn_monitor_node.py
+
+3. If too many false positives, increase to: 0.2035
+4. If missing real anomalies, decrease to: 0.0536
+======================================================================

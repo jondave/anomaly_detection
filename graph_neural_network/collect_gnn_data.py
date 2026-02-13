@@ -27,7 +27,7 @@ import argparse
 import numpy as np
 import time
 from collections import deque
-from typing import List, Optional, Deque, Tuple
+from typing import List, Optional, Deque, Tuple, Dict, Any
 import sys
 
 import rclpy
@@ -37,7 +37,6 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
-import message_filters
 
 
 class GNNDataCollector(Node):
@@ -95,6 +94,15 @@ class GNNDataCollector(Node):
         self.last_sample_time = None
         self.samples_collected = 0
         
+        # Manual message buffers for synchronization
+        # Store (timestamp, message) tuples
+        self.cmd_vel_buffer: Deque[Tuple[float, Twist]] = deque(maxlen=100)
+        self.imu_buffer: Deque[Tuple[float, Imu]] = deque(maxlen=100)
+        self.odom_buffer: Deque[Tuple[float, Odometry]] = deque(maxlen=100)
+        
+        # Synchronization tolerance (seconds)
+        self.sync_tolerance = 0.2
+        
         self.get_logger().info("=" * 70)
         self.get_logger().info("GNN Data Collection Node")
         self.get_logger().info("=" * 70)
@@ -105,62 +113,94 @@ class GNNDataCollector(Node):
         self.get_logger().info(f"Output: {output_path}")
         self.get_logger().info("=" * 70)
         
-        # Setup subscribers with message filters
+        # Setup individual subscribers (manual synchronization)
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             history=HistoryPolicy.KEEP_LAST,
             depth=10
         )
         
-        # Individual callbacks to monitor topic activity
-        self.cmd_vel_sub = message_filters.Subscriber(
-            self,
+        self.cmd_vel_sub = self.create_subscription(
             Twist,
             '/cmd_vel',
+            self.cmd_vel_callback,
             qos_profile=qos_profile
         )
-        self.cmd_vel_sub.registerCallback(lambda msg: self._increment_counter('cmd_vel'))
         
-        self.imu_sub = message_filters.Subscriber(
-            self,
+        self.imu_sub = self.create_subscription(
             Imu,
             '/imu/data_raw',
+            self.imu_callback,
             qos_profile=qos_profile
         )
-        self.imu_sub.registerCallback(lambda msg: self._increment_counter('imu'))
         
-        self.odom_sub = message_filters.Subscriber(
-            self,
+        self.odom_sub = self.create_subscription(
             Odometry,
             '/odom',
+            self.odom_callback,
             qos_profile=qos_profile
         )
-        self.odom_sub.registerCallback(lambda msg: self._increment_counter('odom'))
-        
-        # Time synchronizer (allow_headerless=True for cmd_vel Twist messages)
-        self.sync = message_filters.ApproximateTimeSynchronizer(
-            [self.cmd_vel_sub, self.imu_sub, self.odom_sub],
-            queue_size=10,
-            slop=0.1,
-            allow_headerless=True
-        )
-        self.sync.registerCallback(self.sensor_callback)
         
         self.get_logger().info("Waiting for sensor messages...")
         self.get_logger().info("Please ensure robot is operating normally!")
         self.get_logger().info("=" * 70)
         
-        # Status timer to show topic activity
+        # Timer to attempt synchronization and monitoring
+        self.sync_timer = self.create_timer(0.01, self.attempt_sync)
         self.status_timer = self.create_timer(3.0, self.print_status)
     
-    def _increment_counter(self, topic: str):
-        """Count individual topic messages for diagnostics."""
-        if topic == 'cmd_vel':
-            self.cmd_vel_count += 1
-        elif topic == 'imu':
-            self.imu_count += 1
-        elif topic == 'odom':
-            self.odom_count += 1
+    def cmd_vel_callback(self, msg: Twist):
+        """Callback for /cmd_vel messages."""
+        self.cmd_vel_count += 1
+        timestamp = self.get_clock().now().nanoseconds / 1e9
+        self.cmd_vel_buffer.append((timestamp, msg))
+    
+    def imu_callback(self, msg: Imu):
+        """Callback for /imu/data_raw messages."""
+        self.imu_count += 1
+        timestamp = self.get_clock().now().nanoseconds / 1e9
+        self.imu_buffer.append((timestamp, msg))
+    
+    def odom_callback(self, msg: Odometry):
+        """Callback for /odom messages."""
+        self.odom_count += 1
+        timestamp = self.get_clock().now().nanoseconds / 1e9
+        self.odom_buffer.append((timestamp, msg))
+    
+    def attempt_sync(self):
+        """Attempt to find synchronized messages from all three topics."""
+        # Need at least one message from each topic
+        if not self.cmd_vel_buffer or not self.imu_buffer or not self.odom_buffer:
+            return
+        
+        # Use the most recent imu message as reference point
+        imu_time, imu_msg = self.imu_buffer[-1]
+        
+        # Find cmd_vel and odom messages closest in time to imu
+        # Look through buffers for messages within sync_tolerance
+        cmd_vel_match = None
+        odom_match = None
+        
+        # Find best cmd_vel match
+        for cv_time, cv_msg in self.cmd_vel_buffer:
+            if abs(cv_time - imu_time) <= self.sync_tolerance:
+                if cmd_vel_match is None or abs(cv_time - imu_time) < abs(cmd_vel_match[0] - imu_time):
+                    cmd_vel_match = (cv_time, cv_msg)
+        
+        # Find best odom match
+        for odom_time, odom_msg in self.odom_buffer:
+            if abs(odom_time - imu_time) <= self.sync_tolerance:
+                if odom_match is None or abs(odom_time - imu_time) < abs(odom_match[0] - imu_time):
+                    odom_match = (odom_time, odom_msg)
+        
+        # If we found matches for all three, process them
+        if cmd_vel_match is not None and odom_match is not None:
+            self.sensor_callback(cmd_vel_match[1], imu_msg, odom_match[1])
+            
+            # Clean up old messages to save memory
+            self.cmd_vel_buffer.clear()
+            self.imu_buffer.clear()
+            self.odom_buffer.clear()
     
     def print_status(self):
         """Print periodic status update showing topic activity."""
@@ -169,7 +209,8 @@ class GNNDataCollector(Node):
             self.get_logger().info(
                 f"📡 Topic Activity: /cmd_vel={self.cmd_vel_count} | "
                 f"/imu/data_raw={self.imu_count} | /odom={self.odom_count} | "
-                f"Synced={self.sync_count}"
+                f"Synced={self.sync_count} | "
+                f"Buffers: cmd_vel={len(self.cmd_vel_buffer)} imu={len(self.imu_buffer)} odom={len(self.odom_buffer)}"
             )
             
             # Provide helpful diagnostics
@@ -189,7 +230,7 @@ class GNNDataCollector(Node):
                 if missing:
                     self.get_logger().warn(f"⚠ Waiting for topics: {', '.join(missing)}")
                 else:
-                    self.get_logger().info("✓ All topics active, waiting for synchronization...")
+                    self.get_logger().info("✓ All topics active, attempting synchronization...")
     
     def extract_features(
         self,

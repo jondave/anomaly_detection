@@ -74,3 +74,5 @@ dist/
 # IDE
 .vscode/
 .idea/
+
+/rosbags/*
