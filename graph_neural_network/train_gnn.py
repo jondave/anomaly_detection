@@ -362,17 +362,29 @@ class GNNTrainer:
             Directory to save the visualization
         """
         adj_matrix = self.model.get_learned_graph().cpu().numpy()
-        
-        plt.figure(figsize=(8, 7))
+
+        sensor_labels = [
+            "cmd lin_x",
+            "cmd ang_z",
+            "imu acc_x",
+            "imu acc_y",
+            "imu gyro_z",
+            "odom lin_x",
+            "odom ang_z",
+            "imu ori_z",
+        ]
+
+        plt.figure(figsize=(9, 8))
         im = plt.imshow(adj_matrix, cmap='viridis', aspect='auto')
         plt.colorbar(im, label='Connection Strength')
         plt.title('Learned Sensor Relationship Graph', fontsize=14, fontweight='bold')
-        plt.xlabel('Sensor ID', fontsize=12)
-        plt.ylabel('Sensor ID', fontsize=12)
-        
+        plt.xlabel('Sensor', fontsize=12)
+        plt.ylabel('Sensor', fontsize=12)
+
         # Add grid
-        plt.xticks(range(self.model.num_sensors))
-        plt.yticks(range(self.model.num_sensors))
+        ticks = range(self.model.num_sensors)
+        plt.xticks(ticks, sensor_labels[:self.model.num_sensors], rotation=45, ha='right', fontsize=9)
+        plt.yticks(ticks, sensor_labels[:self.model.num_sensors], fontsize=9)
         plt.grid(True, alpha=0.3, linestyle='--', linewidth=0.5)
         
         plt.tight_layout()

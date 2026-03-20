@@ -1,0 +1,5 @@
+USED_BAGS
+- rosbag2_2026_02_26-10_52_05
+SKIPPED_BAGS
+- rosbag2_2026_02_26-11_15_46: Error reading SQL query. SQLite error (11): database disk image is malformed
+- rosbag2_2026_03_10-10_03_41: Error reading SQL query. SQLite error (11): database disk image is malformed

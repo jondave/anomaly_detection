@@ -1,0 +1,93 @@
+========================================================================
+OVERALL  (all labeled rows)
+------------------------------------------------------------------------
+Method         AUROC     AUPRC    FA/min     Threshold
+------------------------------------------------------------------------
+gnn           0.4299    0.1679   30.0890        0.3544
+msvdd         0.6526    0.2684   30.0855        0.1472
+ae            0.7670    0.3209   30.0855        1.7582
+svm           0.6971    0.3089   30.0855       11.2444
+
+SCENARIO: cover_lidar
+--------------------------------------------------
+Method         AUROC     AUPRC
+--------------------------------------------------
+gnn           0.7422    0.3326
+msvdd         0.8563    0.4136
+ae            0.8560    0.4073
+svm           0.8783    0.4640
+
+SCENARIO: crash_into_object_emergency_stop
+--------------------------------------------------
+Method         AUROC     AUPRC
+--------------------------------------------------
+gnn           0.1541    0.1990
+msvdd         0.2769    0.2240
+ae            0.2820    0.2136
+svm           0.2315    0.2133
+
+SCENARIO: estop_push_robot
+--------------------------------------------------
+Method         AUROC     AUPRC
+--------------------------------------------------
+gnn           0.2104    0.3694
+msvdd         0.4628    0.4857
+ae            0.6366    0.6066
+svm           0.4640    0.5172
+
+SCENARIO: normal_operation
+--------------------------------------------------
+Method         AUROC     AUPRC
+--------------------------------------------------
+gnn              N/A       N/A
+msvdd            N/A       N/A
+ae               N/A       N/A
+svm              N/A       N/A
+
+========================================================================
+DETECTION DELAYS  (seconds from anomaly start to first alarm)
+------------------------------------------------------------------------
+Method      Event                           Detected   Delay (s)
+------------------------------------------------------------------------
+gnn         lidar_covered                        YES      0.7000
+gnn         first_crash_stop                     YES      0.0000
+gnn         second_crash_stop                    YES      7.0000
+gnn         third_crash_stop                     YES      6.3000
+gnn         fourth_crash_stop                     NO           —
+gnn         push_estop_and_push_robot            YES      0.0000
+gnn         push_estop_and_push_robot            YES      9.2000
+
+msvdd       lidar_covered                        YES      4.0000
+msvdd       first_crash_stop                     YES     22.6000
+msvdd       second_crash_stop                    YES     19.5000
+msvdd       third_crash_stop                     YES     11.5000
+msvdd       fourth_crash_stop                    YES     10.5000
+msvdd       push_estop_and_push_robot            YES     27.5000
+msvdd       push_estop_and_push_robot            YES     14.3000
+
+ae          lidar_covered                        YES      3.3000
+ae          first_crash_stop                     YES      0.0000
+ae          second_crash_stop                    YES     27.0000
+ae          third_crash_stop                     YES     19.0000
+ae          fourth_crash_stop                    YES     11.0000
+ae          push_estop_and_push_robot            YES     26.7000
+ae          push_estop_and_push_robot            YES     13.3000
+
+svm         lidar_covered                        YES      3.6000
+svm         first_crash_stop                     YES     41.9000
+svm         second_crash_stop                    YES     38.8000
+svm         third_crash_stop                     YES     30.8000
+svm         fourth_crash_stop                    YES     10.7000
+svm         push_estop_and_push_robot            YES     27.0000
+svm         push_estop_and_push_robot            YES     13.5000
+
+========================================================================
+THRESHOLD SWEEP SUMMARY  (best-F1 operating point)
+------------------------------------------------------------------------
+Method        Thresh      Prec       Rec        F1    FA/min  Delay(s)
+------------------------------------------------------------------------
+gnn           0.0062    0.2196    0.9777    0.3586  499.9411    0.0000
+msvdd         0.0337    0.2657    0.6844    0.3828  261.1968    0.0714
+ae            0.1439    0.3528    0.9505    0.5146  240.8549    0.0000
+svm          -0.8314    0.2855    0.8379    0.4259  289.5729    0.0000
+========================================================================

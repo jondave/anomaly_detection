@@ -1,0 +1,22 @@
+{
+  "sample_rate_hz": 10.0,
+  "feature_window_size": 10,
+  "gnn_score_mode": "next_step",
+  "device": "cpu",
+  "bags": [
+    {
+      "bag_path": "rosbag2_2026_03_10-10_38_36",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/estop_push_robot/rosbag2_2026_03_10-10_38_36",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773139124.429948,
+      "bag_end_time_abs": 1773139166.0299084,
+      "duration_sec": 41.59996032714844,
+      "num_rows": 417,
+      "num_labeled_rows": 172
+    }
+  ]
+}

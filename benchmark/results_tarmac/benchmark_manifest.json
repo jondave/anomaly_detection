@@ -1,0 +1,128 @@
+{
+  "sample_rate_hz": 10.0,
+  "feature_window_size": 10,
+  "gnn_score_mode": "next_step",
+  "device": "cpu",
+  "bags": [
+    {
+      "bag_path": "cover_lidar/rosbag2_2026_03_18-09_57_02",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/cover_lidar/rosbag2_2026_03_18-09_57_02",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827825.7498477,
+      "bag_end_time_abs": 1773827858.6498163,
+      "duration_sec": 32.89996862411499,
+      "num_rows": 330,
+      "num_labeled_rows": 123
+    },
+    {
+      "bag_path": "cover_lidar/rosbag2_2026_03_18-09_58_01",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/cover_lidar/rosbag2_2026_03_18-09_58_01",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827883.1362722,
+      "bag_end_time_abs": 1773827902.9362533,
+      "duration_sec": 19.799981117248535,
+      "num_rows": 199,
+      "num_labeled_rows": 96
+    },
+    {
+      "bag_path": "crash_into_object_emergency_stop/rosbag2_2026_03_18-09_50_31",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/crash_into_object_emergency_stop/rosbag2_2026_03_18-09_50_31",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827435.388698,
+      "bag_end_time_abs": 1773827457.8886766,
+      "duration_sec": 22.49997854232788,
+      "num_rows": 226,
+      "num_labeled_rows": 174
+    },
+    {
+      "bag_path": "crash_into_object_emergency_stop/rosbag2_2026_03_18-09_51_12",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/crash_into_object_emergency_stop/rosbag2_2026_03_18-09_51_12",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827475.7528586,
+      "bag_end_time_abs": 1773827485.4528494,
+      "duration_sec": 9.69999074935913,
+      "num_rows": 98,
+      "num_labeled_rows": 33
+    },
+    {
+      "bag_path": "crash_into_object_emergency_stop/rosbag2_2026_03_18-09_52_01",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/crash_into_object_emergency_stop/rosbag2_2026_03_18-09_52_01",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827523.5190256,
+      "bag_end_time_abs": 1773827535.0190146,
+      "duration_sec": 11.499989032745361,
+      "num_rows": 116,
+      "num_labeled_rows": 54
+    },
+    {
+      "bag_path": "crash_into_object_emergency_stop/rosbag2_2026_03_18-09_52_28",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/crash_into_object_emergency_stop/rosbag2_2026_03_18-09_52_28",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827549.670277,
+      "bag_end_time_abs": 1773827558.5702686,
+      "duration_sec": 8.899991512298584,
+      "num_rows": 90,
+      "num_labeled_rows": 36
+    },
+    {
+      "bag_path": "estop_push_robot/rosbag2_2026_03_18-09_53_03",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/estop_push_robot/rosbag2_2026_03_18-09_53_03",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827585.7950456,
+      "bag_end_time_abs": 1773827605.195027,
+      "duration_sec": 19.39998149871826,
+      "num_rows": 195,
+      "num_labeled_rows": 125
+    },
+    {
+      "bag_path": "estop_push_robot/rosbag2_2026_03_18-09_55_18",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/estop_push_robot/rosbag2_2026_03_18-09_55_18",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773827721.298457,
+      "bag_end_time_abs": 1773827743.4984357,
+      "duration_sec": 22.199978828430176,
+      "num_rows": 223,
+      "num_labeled_rows": 106
+    },
+    {
+      "bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/normal_operation/rosbag2_2026_03_18-09_45_06",
+      "error": "Error reading SQL query. SQLite error (11): database disk image is malformed"
+    },
+    {
+      "bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/tarmac/normal_operation/rosbag2_2026_03_18-09_47_56",
+      "error": "Error reading SQL query. SQLite error (11): database disk image is malformed"
+    }
+  ]
+}

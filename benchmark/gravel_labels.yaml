@@ -1,0 +1,80 @@
+bags:
+  - bag_path: normal_operation/rosbag2_2026_02_26-10_52_05
+    scenario: normal_operation
+    intervals: []
+
+  - bag_path: normal_operation/rosbag2_2026_02_26-11_15_46
+    scenario: normal_operation
+    intervals: []
+
+  - bag_path: normal_operation/rosbag2_2026_03_10-10_03_41
+    scenario: normal_operation
+    intervals: []
+
+  - bag_path: estop_push_robot/rosbag2_2026_03_10-10_38_36
+    scenario: estop_push_robot
+    intervals:
+      - event_id: estop_push_01
+        name: push_estop_and_push_robot
+        start_abs: 1773139136.71
+        end_abs: 1773139153.92
+        notes: User-provided approximate interval.
+
+  - bag_path: estop_push_robot/rosbag2_2026_03_10-10_39_34
+    scenario: estop_push_robot
+    intervals:
+      - event_id: estop_push_02
+        name: push_estop_and_push_robot
+        start_abs: 1773139192.72
+        end_abs: 1773139213.07
+        notes: User-provided approximate interval ending at bag end.
+
+  - bag_path: cover_lidar/rosbag2_2026_03_10-10_43_39
+    scenario: cover_lidar
+    intervals:
+      - event_id: cover_lidar_01
+        name: lidar_covered
+        start_abs: 1773139436.43
+        end_abs: 1773139452.05
+        notes: User-provided approximate interval ending at bag end.
+
+  - bag_path: cover_lidar/rosbag2_2026_03_10-10_45_15
+    scenario: cover_lidar
+    intervals:
+      - event_id: cover_lidar_02
+        name: lidar_covered
+        end_abs: 1773139539.46
+        notes: Start time from the user note appears truncated and must be reviewed before using this interval in the paper.
+
+  - bag_path: cover_lidar/rosbag2_2026_03_10-10_45_45
+    scenario: cover_lidar
+    intervals:
+      - event_id: cover_lidar_03
+        name: lidar_covered_then_uncovered
+        start_abs: 1773139546.02
+        end_abs: 1773139560.54
+        notes: User-provided interval. Lidar starts covered at bag start and is uncovered near the end.
+
+  - bag_path: crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35
+    scenario: crash_into_object_emergency_stop
+    intervals:
+      - event_id: crash_01
+        name: first_crash_stop
+        start_abs: 1773138605.03
+        end_abs: 1773138607.32
+        notes: User-provided approximate interval.
+      - event_id: crash_02
+        name: second_crash_stop
+        start_abs: 1773138608.19
+        end_abs: 1773138615.37
+        notes: User-provided approximate interval.
+      - event_id: crash_03
+        name: third_crash_stop
+        start_abs: 1773138616.31
+        end_abs: 1773138618.90
+        notes: User-provided approximate interval.
+      - event_id: crash_04
+        name: fourth_crash_stop
+        start_abs: 1773138669.26
+        end_abs: 1773138692.77
+        notes: User-provided approximate interval ending at bag end.

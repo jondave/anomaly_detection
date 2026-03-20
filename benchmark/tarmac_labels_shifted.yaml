@@ -1,0 +1,71 @@
+bags:
+- bag_path: cover_lidar/rosbag2_2026_03_18-09_57_02
+  scenario: cover_lidar
+  intervals:
+  - event_id: cover_lidar_01
+    name: cover_lidar
+    start_abs: 1773827830.48
+    end_abs: 1773827843.4
+- bag_path: cover_lidar/rosbag2_2026_03_18-09_58_01
+  scenario: cover_lidar
+  intervals:
+  - event_id: cover_lidar_01
+    name: cover_lidar
+    start_abs: 1773827889.85
+    end_abs: 1773827899.79
+- bag_path: crash_into_object_emergency_stop/rosbag2_2026_03_18-09_50_31
+  scenario: crash_into_object_emergency_stop
+  intervals:
+  - event_id: crash_into_object_emergency_stop_01
+    name: crash_stop
+    start_abs: 1773827439.57
+    end_abs: 1773827460.91
+- bag_path: crash_into_object_emergency_stop/rosbag2_2026_03_18-09_51_12
+  scenario: crash_into_object_emergency_stop
+  intervals:
+  - event_id: crash_into_object_emergency_stop_01
+    name: crash_stop
+    start_abs: 1773827480.19
+    end_abs: 1773827484.52
+  - event_id: crash_into_object_emergency_stop_02
+    name: crash_stop
+    start_abs: 1773827486.21
+    end_abs: 1773827488.27
+- bag_path: crash_into_object_emergency_stop/rosbag2_2026_03_18-09_52_01
+  scenario: crash_into_object_emergency_stop
+  intervals:
+  - event_id: crash_into_object_emergency_stop_01
+    name: crash_stop
+    start_abs: 1773827527.64
+    end_abs: 1773827532.12
+  - event_id: crash_into_object_emergency_stop_02
+    name: crash_stop
+    start_abs: 1773827532.96
+    end_abs: 1773827536.94
+- bag_path: crash_into_object_emergency_stop/rosbag2_2026_03_18-09_52_28
+  scenario: crash_into_object_emergency_stop
+  intervals:
+  - event_id: crash_into_object_emergency_stop_01
+    name: crash_stop
+    start_abs: 1773827554.05
+    end_abs: 1773827560.82
+- bag_path: estop_push_robot/rosbag2_2026_03_18-09_53_03
+  scenario: estop_push_robot
+  intervals:
+  - event_id: estop_push_robot_01
+    name: estop_push_robot
+    start_abs: 1773827590.44
+    end_abs: 1773827603.11
+- bag_path: estop_push_robot/rosbag2_2026_03_18-09_55_18
+  scenario: estop_push_robot
+  intervals:
+  - event_id: estop_push_robot_01
+    name: estop_push_robot
+    start_abs: 1773827728.12
+    end_abs: 1773827739.34
+- bag_path: normal_operation/rosbag2_2026_03_18-09_45_06
+  scenario: normal_operation
+  intervals: []
+- bag_path: normal_operation/rosbag2_2026_03_18-09_47_56
+  scenario: normal_operation
+  intervals: []

@@ -1,0 +1,5283 @@
+{
+  "fpr_target": 0.05,
+  "thresholds": {
+    "gnn": 0.3543946619999994,
+    "msvdd": 0.14723440149999972,
+    "ae": 1.7582043949999966,
+    "svm": 11.244422599999998
+  },
+  "overall": {
+    "gnn": {
+      "auroc": 0.4299424156065458,
+      "auprc": 0.16786963380942305
+    },
+    "msvdd": {
+      "auroc": 0.6526399114270401,
+      "auprc": 0.2683957554011907
+    },
+    "ae": {
+      "auroc": 0.7670118614425544,
+      "auprc": 0.3208819891544695
+    },
+    "svm": {
+      "auroc": 0.6971115060223971,
+      "auprc": 0.308940837255541
+    }
+  },
+  "per_scenario": {
+    "gnn": {
+      "cover_lidar": {
+        "auroc": 0.7422342954159592,
+        "auprc": 0.3326202590543537
+      },
+      "crash_into_object_emergency_stop": {
+        "auroc": 0.15414559335598843,
+        "auprc": 0.198978538349231
+      },
+      "estop_push_robot": {
+        "auroc": 0.21040538614990023,
+        "auprc": 0.3693810375807355
+      },
+      "normal_operation": {
+        "auroc": NaN,
+        "auprc": NaN
+      }
+    },
+    "msvdd": {
+      "cover_lidar": {
+        "auroc": 0.8563204930662558,
+        "auprc": 0.4136273593575853
+      },
+      "crash_into_object_emergency_stop": {
+        "auroc": 0.27691003012993787,
+        "auprc": 0.22400259371715198
+      },
+      "estop_push_robot": {
+        "auroc": 0.4627912129653077,
+        "auprc": 0.4856627204281367
+      },
+      "normal_operation": {
+        "auroc": NaN,
+        "auprc": NaN
+      }
+    },
+    "ae": {
+      "cover_lidar": {
+        "auroc": 0.8560123266563945,
+        "auprc": 0.40729000469106635
+      },
+      "crash_into_object_emergency_stop": {
+        "auroc": 0.28201866506843454,
+        "auprc": 0.2136316878156923
+      },
+      "estop_push_robot": {
+        "auroc": 0.636648518612307,
+        "auprc": 0.606553904543486
+      },
+      "normal_operation": {
+        "auroc": NaN,
+        "auprc": NaN
+      }
+    },
+    "svm": {
+      "cover_lidar": {
+        "auroc": 0.8782989214175656,
+        "auprc": 0.46402602105423935
+      },
+      "crash_into_object_emergency_stop": {
+        "auroc": 0.23154796123471588,
+        "auprc": 0.21332888937866606
+      },
+      "estop_push_robot": {
+        "auroc": 0.4639782223347684,
+        "auprc": 0.5171647201944654
+      },
+      "normal_operation": {
+        "auroc": NaN,
+        "auprc": NaN
+      }
+    }
+  },
+  "detection_delays": {
+    "gnn": [
+      {
+        "event_id": "cover_lidar_01",
+        "event_name": "lidar_covered",
+        "scenario": "cover_lidar",
+        "bag": "cover_lidar/rosbag2_2026_03_10-10_43_39",
+        "event_start": 1773139435.660331,
+        "event_duration_s": 12.399988174438477,
+        "detected": true,
+        "delay_s": 0.6999993324279785,
+        "threshold": 0.3543946619999994
+      },
+      {
+        "event_id": "crash_01",
+        "event_name": "first_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138604.2593584,
+        "event_duration_s": 2.999997138977051,
+        "detected": true,
+        "delay_s": 0.0,
+        "threshold": 0.3543946619999994
+      },
+      {
+        "event_id": "crash_02",
+        "event_name": "second_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138607.3593554,
+        "event_duration_s": 7.8999924659729,
+        "detected": true,
+        "delay_s": 6.999993324279785,
+        "threshold": 0.3543946619999994
+      },
+      {
+        "event_id": "crash_03",
+        "event_name": "third_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138615.3593478,
+        "event_duration_s": 3.4999966621398926,
+        "detected": true,
+        "delay_s": 6.299993991851807,
+        "threshold": 0.3543946619999994
+      },
+      {
+        "event_id": "crash_04",
+        "event_name": "fourth_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138668.559297,
+        "event_duration_s": 18.29998254776001,
+        "detected": false,
+        "delay_s": NaN,
+        "threshold": 0.3543946619999994
+      },
+      {
+        "event_id": "estop_push_01",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_38_36",
+        "event_start": 1773139135.8299372,
+        "event_duration_s": 17.999982833862305,
+        "detected": true,
+        "delay_s": 0.0,
+        "threshold": 0.3543946619999994
+      },
+      {
+        "event_id": "estop_push_02",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_39_34",
+        "event_start": 1773139192.885429,
+        "event_duration_s": 16.999983549118042,
+        "detected": true,
+        "delay_s": 9.19999098777771,
+        "threshold": 0.3543946619999994
+      }
+    ],
+    "msvdd": [
+      {
+        "event_id": "cover_lidar_01",
+        "event_name": "lidar_covered",
+        "scenario": "cover_lidar",
+        "bag": "cover_lidar/rosbag2_2026_03_10-10_43_39",
+        "event_start": 1773139435.660331,
+        "event_duration_s": 12.399988174438477,
+        "detected": true,
+        "delay_s": 3.9999961853027344,
+        "threshold": 0.14723440149999972
+      },
+      {
+        "event_id": "crash_01",
+        "event_name": "first_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138604.2593584,
+        "event_duration_s": 2.999997138977051,
+        "detected": true,
+        "delay_s": 22.59997844696045,
+        "threshold": 0.14723440149999972
+      },
+      {
+        "event_id": "crash_02",
+        "event_name": "second_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138607.3593554,
+        "event_duration_s": 7.8999924659729,
+        "detected": true,
+        "delay_s": 19.49998140335083,
+        "threshold": 0.14723440149999972
+      },
+      {
+        "event_id": "crash_03",
+        "event_name": "third_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138615.3593478,
+        "event_duration_s": 3.4999966621398926,
+        "detected": true,
+        "delay_s": 11.499989032745361,
+        "threshold": 0.14723440149999972
+      },
+      {
+        "event_id": "crash_04",
+        "event_name": "fourth_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138668.559297,
+        "event_duration_s": 18.29998254776001,
+        "detected": true,
+        "delay_s": 10.499989986419678,
+        "threshold": 0.14723440149999972
+      },
+      {
+        "event_id": "estop_push_01",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_38_36",
+        "event_start": 1773139135.8299372,
+        "event_duration_s": 17.999982833862305,
+        "detected": true,
+        "delay_s": 27.4999737739563,
+        "threshold": 0.14723440149999972
+      },
+      {
+        "event_id": "estop_push_02",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_39_34",
+        "event_start": 1773139192.885429,
+        "event_duration_s": 16.999983549118042,
+        "detected": true,
+        "delay_s": 14.299986124038696,
+        "threshold": 0.14723440149999972
+      }
+    ],
+    "ae": [
+      {
+        "event_id": "cover_lidar_01",
+        "event_name": "lidar_covered",
+        "scenario": "cover_lidar",
+        "bag": "cover_lidar/rosbag2_2026_03_10-10_43_39",
+        "event_start": 1773139435.660331,
+        "event_duration_s": 12.399988174438477,
+        "detected": true,
+        "delay_s": 3.299997091293335,
+        "threshold": 1.7582043949999966
+      },
+      {
+        "event_id": "crash_01",
+        "event_name": "first_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138604.2593584,
+        "event_duration_s": 2.999997138977051,
+        "detected": true,
+        "delay_s": 0.0,
+        "threshold": 1.7582043949999966
+      },
+      {
+        "event_id": "crash_02",
+        "event_name": "second_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138607.3593554,
+        "event_duration_s": 7.8999924659729,
+        "detected": true,
+        "delay_s": 26.999974250793457,
+        "threshold": 1.7582043949999966
+      },
+      {
+        "event_id": "crash_03",
+        "event_name": "third_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138615.3593478,
+        "event_duration_s": 3.4999966621398926,
+        "detected": true,
+        "delay_s": 18.99998188018799,
+        "threshold": 1.7582043949999966
+      },
+      {
+        "event_id": "crash_04",
+        "event_name": "fourth_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138668.559297,
+        "event_duration_s": 18.29998254776001,
+        "detected": true,
+        "delay_s": 10.99998950958252,
+        "threshold": 1.7582043949999966
+      },
+      {
+        "event_id": "estop_push_01",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_38_36",
+        "event_start": 1773139135.8299372,
+        "event_duration_s": 17.999982833862305,
+        "detected": true,
+        "delay_s": 26.699974536895752,
+        "threshold": 1.7582043949999966
+      },
+      {
+        "event_id": "estop_push_02",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_39_34",
+        "event_start": 1773139192.885429,
+        "event_duration_s": 16.999983549118042,
+        "detected": true,
+        "delay_s": 13.299987077713013,
+        "threshold": 1.7582043949999966
+      }
+    ],
+    "svm": [
+      {
+        "event_id": "cover_lidar_01",
+        "event_name": "lidar_covered",
+        "scenario": "cover_lidar",
+        "bag": "cover_lidar/rosbag2_2026_03_10-10_43_39",
+        "event_start": 1773139435.660331,
+        "event_duration_s": 12.399988174438477,
+        "detected": true,
+        "delay_s": 3.599996566772461,
+        "threshold": 11.244422599999998
+      },
+      {
+        "event_id": "crash_01",
+        "event_name": "first_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138604.2593584,
+        "event_duration_s": 2.999997138977051,
+        "detected": true,
+        "delay_s": 41.89996004104614,
+        "threshold": 11.244422599999998
+      },
+      {
+        "event_id": "crash_02",
+        "event_name": "second_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138607.3593554,
+        "event_duration_s": 7.8999924659729,
+        "detected": true,
+        "delay_s": 38.79996299743652,
+        "threshold": 11.244422599999998
+      },
+      {
+        "event_id": "crash_03",
+        "event_name": "third_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138615.3593478,
+        "event_duration_s": 3.4999966621398926,
+        "detected": true,
+        "delay_s": 30.799970626831055,
+        "threshold": 11.244422599999998
+      },
+      {
+        "event_id": "crash_04",
+        "event_name": "fourth_crash_stop",
+        "scenario": "crash_into_object_emergency_stop",
+        "bag": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+        "event_start": 1773138668.559297,
+        "event_duration_s": 18.29998254776001,
+        "detected": true,
+        "delay_s": 10.699989795684814,
+        "threshold": 11.244422599999998
+      },
+      {
+        "event_id": "estop_push_01",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_38_36",
+        "event_start": 1773139135.8299372,
+        "event_duration_s": 17.999982833862305,
+        "detected": true,
+        "delay_s": 26.999974489212036,
+        "threshold": 11.244422599999998
+      },
+      {
+        "event_id": "estop_push_02",
+        "event_name": "push_estop_and_push_robot",
+        "scenario": "estop_push_robot",
+        "bag": "estop_push_robot/rosbag2_2026_03_10-10_39_34",
+        "event_start": 1773139192.885429,
+        "event_duration_s": 16.999983549118042,
+        "detected": true,
+        "delay_s": 13.49998688697815,
+        "threshold": 11.244422599999998
+      }
+    ]
+  },
+  "false_alarm_rates": {
+    "gnn": 30.089049466667035,
+    "msvdd": 30.085498777237564,
+    "ae": 30.085498777237564,
+    "svm": 30.085498777237564
+  },
+  "threshold_sweep": {
+    "gnn": {
+      "best_f1_operating_point": {
+        "threshold": 0.006198344090097448,
+        "precision": 0.21956642579210672,
+        "recall": 0.9777227722772277,
+        "f1": 0.3586019064911484,
+        "false_alarms_per_min": 499.9411296000061,
+        "event_recall": 1.0,
+        "mean_delay_s": 0.0,
+        "median_delay_s": 0.0
+      },
+      "curve": [
+        {
+          "threshold": 0.00036590131120000003,
+          "precision": 0.195357833655706,
+          "recall": 1.0,
+          "f1": 0.3268608414239482,
+          "false_alarms_per_min": 592.5228202666739,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.006198344090097448,
+          "precision": 0.21956642579210672,
+          "recall": 0.9777227722772277,
+          "f1": 0.3586019064911484,
+          "false_alarms_per_min": 499.9411296000061,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.012030786868994897,
+          "precision": 0.18296320848525024,
+          "recall": 0.6831683168316832,
+          "f1": 0.28862745098039216,
+          "false_alarms_per_min": 438.87282210256944,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.01786322964789235,
+          "precision": 0.1435114503816794,
+          "recall": 0.46534653465346537,
+          "f1": 0.21936989498249707,
+          "false_alarms_per_min": 399.52560356923567,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9857133116040911,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.023695672426789795,
+          "precision": 0.12709030100334448,
+          "recall": 0.37623762376237624,
+          "f1": 0.18999999999999997,
+          "false_alarms_per_min": 371.7510963692353,
+          "event_recall": 1.0,
+          "mean_delay_s": 1.1714274202074324,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.029528115205687242,
+          "precision": 0.12292507851054285,
+          "recall": 0.33910891089108913,
+          "f1": 0.1804412248929865,
+          "false_alarms_per_min": 348.0715485641068,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.028569459915161,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.03536055798458469,
+          "precision": 0.12205670350792888,
+          "recall": 0.31435643564356436,
+          "f1": 0.17583939079266184,
+          "false_alarms_per_min": 325.2822093230809,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.028569459915161,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.04119300076348214,
+          "precision": 0.12226184411614875,
+          "recall": 0.297029702970297,
+          "f1": 0.1732226632984482,
+          "false_alarms_per_min": 306.7658711897473,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.1285693645477295,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.047025443542379586,
+          "precision": 0.1212615551930397,
+          "recall": 0.275990099009901,
+          "f1": 0.16849263316962598,
+          "false_alarms_per_min": 287.71540791795223,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.142855065209525,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.05285788632127703,
+          "precision": 0.12217718587145339,
+          "recall": 0.26113861386138615,
+          "f1": 0.16646942800788955,
+          "false_alarms_per_min": 269.91123663590076,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.142855065209525,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.05869032910017448,
+          "precision": 0.12645794966236956,
+          "recall": 0.25495049504950495,
+          "f1": 0.16906032006565452,
+          "false_alarms_per_min": 253.35335734359285,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.142855065209525,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.06452277187907193,
+          "precision": 0.1261319534282018,
+          "recall": 0.24133663366336633,
+          "f1": 0.16567544604927778,
+          "false_alarms_per_min": 240.53435402051576,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.142855065209525,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.07035521465796939,
+          "precision": 0.12593094109681788,
+          "recall": 0.2301980198019802,
+          "f1": 0.16280087527352297,
+          "false_alarms_per_min": 229.85185125128487,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.142855065209525,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.07618765743686683,
+          "precision": 0.12738853503184713,
+          "recall": 0.22277227722772278,
+          "f1": 0.16208914903196758,
+          "false_alarms_per_min": 219.52543190769498,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.2857120718274797,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.08202010021576428,
+          "precision": 0.12858192505510654,
+          "recall": 0.21658415841584158,
+          "f1": 0.16136468418626096,
+          "false_alarms_per_min": 211.1574714051308,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.2857120718274797,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.08785254299466172,
+          "precision": 0.1259600614439324,
+          "recall": 0.20297029702970298,
+          "f1": 0.15545023696682464,
+          "false_alarms_per_min": 202.61146918974606,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.299997772489275,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.09368498577355917,
+          "precision": 0.12793522267206478,
+          "recall": 0.19554455445544555,
+          "f1": 0.1546744982868331,
+          "false_alarms_per_min": 191.75092470769465,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.299997772489275,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.09951742855245663,
+          "precision": 0.12980358667805295,
+          "recall": 0.18811881188118812,
+          "f1": 0.15361293582617483,
+          "false_alarms_per_min": 181.4245053641048,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.314283473151071,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.10534987133135407,
+          "precision": 0.13043478260869565,
+          "recall": 0.18193069306930693,
+          "f1": 0.15193798449612406,
+          "false_alarms_per_min": 174.4808785641047,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.314283473151071,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.11118231411025152,
+          "precision": 0.13131313131313133,
+          "recall": 0.17698019801980197,
+          "f1": 0.150764364786505,
+          "false_alarms_per_min": 168.4274603282072,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.11701475688914896,
+          "precision": 0.13523809523809524,
+          "recall": 0.17574257425742573,
+          "f1": 0.1528525296017223,
+          "false_alarms_per_min": 161.66187524102762,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.12284719966804641,
+          "precision": 0.13765182186234817,
+          "recall": 0.16831683168316833,
+          "f1": 0.1514476614699332,
+          "false_alarms_per_min": 151.69153932307879,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.12867964244694388,
+          "precision": 0.1381509032943677,
+          "recall": 0.1608910891089109,
+          "f1": 0.14865637507146942,
+          "false_alarms_per_min": 144.39182909743766,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.13451208522584132,
+          "precision": 0.13876651982378854,
+          "recall": 0.15594059405940594,
+          "f1": 0.14685314685314685,
+          "false_alarms_per_min": 139.22861942564273,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.1403445280047388,
+          "precision": 0.1372093023255814,
+          "recall": 0.14603960396039603,
+          "f1": 0.14148681055155876,
+          "false_alarms_per_min": 132.10695091282213,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.14617697078363623,
+          "precision": 0.14303329223181258,
+          "recall": 0.14356435643564355,
+          "f1": 0.14329833230389127,
+          "false_alarms_per_min": 123.73899041025793,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.15200941356253367,
+          "precision": 0.14652956298200515,
+          "recall": 0.14108910891089108,
+          "f1": 0.14375788146279947,
+          "false_alarms_per_min": 118.21969731282196,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 2.699997385342916,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.1578418563414311,
+          "precision": 0.14945652173913043,
+          "recall": 0.13613861386138615,
+          "f1": 0.14248704663212436,
+          "false_alarms_per_min": 111.45411222564239,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.16367429912032858,
+          "precision": 0.1492329149232915,
+          "recall": 0.13242574257425743,
+          "f1": 0.14032786885245901,
+          "false_alarms_per_min": 108.60544482051415,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.16950674189922602,
+          "precision": 0.1493411420204978,
+          "recall": 0.12623762376237624,
+          "f1": 0.13682092555331993,
+          "false_alarms_per_min": 103.44223514871922,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.17533918467812346,
+          "precision": 0.15114503816793892,
+          "recall": 0.12252475247524752,
+          "f1": 0.13533834586466167,
+          "false_alarms_per_min": 98.99119232820634,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.18117162745702092,
+          "precision": 0.15055467511885895,
+          "recall": 0.11757425742574257,
+          "f1": 0.1320361362056984,
+          "false_alarms_per_min": 95.43035807179604,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.18700407023591836,
+          "precision": 0.15282392026578073,
+          "recall": 0.11386138613861387,
+          "f1": 0.13049645390070921,
+          "false_alarms_per_min": 90.80127353846265,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.1928365130148158,
+          "precision": 0.153184165232358,
+          "recall": 0.11014851485148515,
+          "f1": 0.12814974802015838,
+          "false_alarms_per_min": 87.59652270769338,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.19866895579371327,
+          "precision": 0.15342960288808663,
+          "recall": 0.1051980198019802,
+          "f1": 0.12481644640234947,
+          "false_alarms_per_min": 83.50156331282153,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.2045013985726107,
+          "precision": 0.1575984990619137,
+          "recall": 0.10396039603960396,
+          "f1": 0.12527964205816555,
+          "false_alarms_per_min": 79.94072905641123,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.21033384135150815,
+          "precision": 0.1575875486381323,
+          "recall": 0.10024752475247525,
+          "f1": 0.12254160363086233,
+          "false_alarms_per_min": 77.09206165128299,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.21616628413040562,
+          "precision": 0.16056910569105692,
+          "recall": 0.09777227722772278,
+          "f1": 0.12153846153846154,
+          "false_alarms_per_min": 73.53122739487269,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.22199872690930306,
+          "precision": 0.16452991452991453,
+          "recall": 0.0952970297029703,
+          "f1": 0.1206896551724138,
+          "false_alarms_per_min": 69.61430971282137,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.2278311696882005,
+          "precision": 0.16591928251121077,
+          "recall": 0.09158415841584158,
+          "f1": 0.11802232854864435,
+          "false_alarms_per_min": 66.23151716923158,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.23366361246709794,
+          "precision": 0.16705336426914152,
+          "recall": 0.0891089108910891,
+          "f1": 0.1162227602905569,
+          "false_alarms_per_min": 63.91697490256488,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.2394960552459954,
+          "precision": 0.16790123456790124,
+          "recall": 0.08415841584158416,
+          "f1": 0.112118713932399,
+          "false_alarms_per_min": 60.000057220513554,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.24532849802489284,
+          "precision": 0.1717948717948718,
+          "recall": 0.08292079207920793,
+          "f1": 0.11185308848080133,
+          "false_alarms_per_min": 57.50747324102635,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.2511609408037903,
+          "precision": 0.16976127320954906,
+          "recall": 0.07920792079207921,
+          "f1": 0.10801687763713082,
+          "false_alarms_per_min": 55.727056112821195,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.25699338358268775,
+          "precision": 0.16981132075471697,
+          "recall": 0.07797029702970297,
+          "f1": 0.1068702290076336,
+          "false_alarms_per_min": 54.836847548718616,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.2628258263615852,
+          "precision": 0.16759776536312848,
+          "recall": 0.07425742574257425,
+          "f1": 0.10291595197255574,
+          "false_alarms_per_min": 53.05643042051347,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7499963839848838,
+          "median_delay_s": 3.1499969959259033
+        },
+        {
+          "threshold": 0.26865826914048263,
+          "precision": 0.15895953757225434,
+          "recall": 0.06806930693069307,
+          "f1": 0.09532062391681109,
+          "false_alarms_per_min": 51.81013843076986,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.27449071191938007,
+          "precision": 0.16417910447761194,
+          "recall": 0.06806930693069307,
+          "f1": 0.09623797025371829,
+          "false_alarms_per_min": 49.8516795897442,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.28032315469827757,
+          "precision": 0.16615384615384615,
+          "recall": 0.06683168316831684,
+          "f1": 0.09532215357458076,
+          "false_alarms_per_min": 48.249304174359565,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.286155597477175,
+          "precision": 0.17252396166134185,
+          "recall": 0.06683168316831684,
+          "f1": 0.09634255129348795,
+          "false_alarms_per_min": 46.11280362051338,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.29198804025607245,
+          "precision": 0.1716171617161716,
+          "recall": 0.06435643564356436,
+          "f1": 0.09360936093609361,
+          "false_alarms_per_min": 44.68846991794926,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.2978204830349699,
+          "precision": 0.17586206896551723,
+          "recall": 0.06311881188118812,
+          "f1": 0.09289617486338797,
+          "false_alarms_per_min": 42.55196936410309,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.3036529258138673,
+          "precision": 0.17894736842105263,
+          "recall": 0.06311881188118812,
+          "f1": 0.09332113449222323,
+          "false_alarms_per_min": 41.66176080000051,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.30948536859276476,
+          "precision": 0.18345323741007194,
+          "recall": 0.06311881188118812,
+          "f1": 0.09392265193370165,
+          "false_alarms_per_min": 40.415468810256904,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.3153178113716622,
+          "precision": 0.1811320754716981,
+          "recall": 0.0594059405940594,
+          "f1": 0.08946877912395153,
+          "false_alarms_per_min": 38.63505168205175,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.3211502541505597,
+          "precision": 0.1857707509881423,
+          "recall": 0.05816831683168317,
+          "f1": 0.08859566446748351,
+          "false_alarms_per_min": 36.67659284102609,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.7833296855290732,
+          "median_delay_s": 3.2499969005584717
+        },
+        {
+          "threshold": 0.32698269692945714,
+          "precision": 0.18181818181818182,
+          "recall": 0.054455445544554455,
+          "f1": 0.0838095238095238,
+          "false_alarms_per_min": 35.25225913846197,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.3328151397083546,
+          "precision": 0.1810344827586207,
+          "recall": 0.05198019801980198,
+          "f1": 0.08076923076923077,
+          "false_alarms_per_min": 33.827925435897846,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.338647582487252,
+          "precision": 0.18666666666666668,
+          "recall": 0.05198019801980198,
+          "f1": 0.08131655372700872,
+          "false_alarms_per_min": 32.58163344615424,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.34448002526614946,
+          "precision": 0.1872146118721461,
+          "recall": 0.050742574257425746,
+          "f1": 0.07984420642648492,
+          "false_alarms_per_min": 31.69142488205167,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.3503124680450469,
+          "precision": 0.18779342723004694,
+          "recall": 0.04950495049504951,
+          "f1": 0.07835455435847209,
+          "false_alarms_per_min": 30.801216317949095,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.3561449108239444,
+          "precision": 0.18446601941747573,
+          "recall": 0.04702970297029703,
+          "f1": 0.07495069033530571,
+          "false_alarms_per_min": 29.91100775384652,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.36197735360284183,
+          "precision": 0.18461538461538463,
+          "recall": 0.04455445544554455,
+          "f1": 0.07178464606181456,
+          "false_alarms_per_min": 28.308632338461884,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.3678097963817393,
+          "precision": 0.18556701030927836,
+          "recall": 0.04455445544554455,
+          "f1": 0.0718562874251497,
+          "false_alarms_per_min": 28.130590625641368,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.3736422391606367,
+          "precision": 0.18716577540106952,
+          "recall": 0.043316831683168314,
+          "f1": 0.07035175879396983,
+          "false_alarms_per_min": 27.06234034871828,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.37947468193953415,
+          "precision": 0.19021739130434784,
+          "recall": 0.043316831683168314,
+          "f1": 0.07056451612903225,
+          "false_alarms_per_min": 26.528215210256736,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.3853071247184316,
+          "precision": 0.19553072625698323,
+          "recall": 0.043316831683168314,
+          "f1": 0.07092198581560283,
+          "false_alarms_per_min": 25.63800664615416,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.39113956749732903,
+          "precision": 0.18604651162790697,
+          "recall": 0.039603960396039604,
+          "f1": 0.06530612244897958,
+          "false_alarms_per_min": 24.9258397948721,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 3.866662939389547,
+          "median_delay_s": 3.4999966621398926
+        },
+        {
+          "threshold": 0.39697201027622653,
+          "precision": 0.18181818181818182,
+          "recall": 0.03712871287128713,
+          "f1": 0.06166495375128468,
+          "false_alarms_per_min": 24.035631230769525,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.483328064282735,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.40280445305512397,
+          "precision": 0.1761006289308176,
+          "recall": 0.034653465346534656,
+          "f1": 0.0579110651499483,
+          "false_alarms_per_min": 23.323464379487465,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.699994524319966,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4086368958340214,
+          "precision": 0.17834394904458598,
+          "recall": 0.034653465346534656,
+          "f1": 0.05803108808290156,
+          "false_alarms_per_min": 22.967380953846433,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.699994524319966,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.41446933861291885,
+          "precision": 0.18666666666666668,
+          "recall": 0.034653465346534656,
+          "f1": 0.05845511482254698,
+          "false_alarms_per_min": 21.72108896410283,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.699994524319966,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4203017813918163,
+          "precision": 0.1780821917808219,
+          "recall": 0.03217821782178218,
+          "f1": 0.05450733752620545,
+          "false_alarms_per_min": 21.3650055384618,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.699994524319966,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4261342241707137,
+          "precision": 0.18248175182481752,
+          "recall": 0.03094059405940594,
+          "f1": 0.05291005291005291,
+          "false_alarms_per_min": 19.940671835897678,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.816661079724629,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4319666669496112,
+          "precision": 0.18045112781954886,
+          "recall": 0.0297029702970297,
+          "f1": 0.05100956429330499,
+          "false_alarms_per_min": 19.406546697436134,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.816661079724629,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.43779910972850866,
+          "precision": 0.18461538461538463,
+          "recall": 0.0297029702970297,
+          "f1": 0.0511727078891258,
+          "false_alarms_per_min": 18.87242155897459,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.816661079724629,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4436315525074061,
+          "precision": 0.18110236220472442,
+          "recall": 0.028465346534653466,
+          "f1": 0.04919786096256684,
+          "false_alarms_per_min": 18.51633813333356,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 5.816661079724629,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.44946399528630354,
+          "precision": 0.1774193548387097,
+          "recall": 0.027227722772277228,
+          "f1": 0.047210300429184546,
+          "false_alarms_per_min": 18.16025470769253,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.455296438065201,
+          "precision": 0.18487394957983194,
+          "recall": 0.027227722772277228,
+          "f1": 0.04746494066882417,
+          "false_alarms_per_min": 17.270046143589955,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4611288808440984,
+          "precision": 0.1810344827586207,
+          "recall": 0.02599009900990099,
+          "f1": 0.045454545454545456,
+          "false_alarms_per_min": 16.913962717948923,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.46696132362299586,
+          "precision": 0.1810344827586207,
+          "recall": 0.02599009900990099,
+          "f1": 0.045454545454545456,
+          "false_alarms_per_min": 16.913962717948923,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.47279376640189336,
+          "precision": 0.17857142857142858,
+          "recall": 0.024752475247524754,
+          "f1": 0.043478260869565216,
+          "false_alarms_per_min": 16.37983757948738,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4786262091807908,
+          "precision": 0.18181818181818182,
+          "recall": 0.024752475247524754,
+          "f1": 0.04357298474945534,
+          "false_alarms_per_min": 16.02375415384635,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.48445865195968824,
+          "precision": 0.18095238095238095,
+          "recall": 0.023514851485148515,
+          "f1": 0.0416210295728368,
+          "false_alarms_per_min": 15.31158730256429,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4902910947385857,
+          "precision": 0.18811881188118812,
+          "recall": 0.023514851485148515,
+          "f1": 0.041804180418041806,
+          "false_alarms_per_min": 14.59942045128223,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 6.216660698254903,
+          "median_delay_s": 6.649993658065796
+        },
+        {
+          "threshold": 0.4961235375174831,
+          "precision": 0.18556701030927836,
+          "recall": 0.022277227722772276,
+          "f1": 0.039779005524861875,
+          "false_alarms_per_min": 14.065295312820684,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5019559802963806,
+          "precision": 0.1875,
+          "recall": 0.022277227722772276,
+          "f1": 0.03982300884955753,
+          "false_alarms_per_min": 13.88725360000017,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5077884230752779,
+          "precision": 0.1875,
+          "recall": 0.022277227722772276,
+          "f1": 0.03982300884955753,
+          "false_alarms_per_min": 13.88725360000017,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5136208658541754,
+          "precision": 0.18947368421052632,
+          "recall": 0.022277227722772276,
+          "f1": 0.0398671096345515,
+          "false_alarms_per_min": 13.709211887179654,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5194533086330728,
+          "precision": 0.1935483870967742,
+          "recall": 0.022277227722772276,
+          "f1": 0.03995560488346282,
+          "false_alarms_per_min": 13.353128461538624,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5252857514119703,
+          "precision": 0.1935483870967742,
+          "recall": 0.022277227722772276,
+          "f1": 0.03995560488346282,
+          "false_alarms_per_min": 13.353128461538624,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5311181941908678,
+          "precision": 0.1978021978021978,
+          "recall": 0.022277227722772276,
+          "f1": 0.04004449388209121,
+          "false_alarms_per_min": 12.997045035897594,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5369506369697652,
+          "precision": 0.2,
+          "recall": 0.022277227722772276,
+          "f1": 0.04008908685968819,
+          "false_alarms_per_min": 12.81900332307708,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5427830797486627,
+          "precision": 0.19767441860465115,
+          "recall": 0.02103960396039604,
+          "f1": 0.03803131991051455,
+          "false_alarms_per_min": 12.284878184615534,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5486155225275601,
+          "precision": 0.20481927710843373,
+          "recall": 0.02103960396039604,
+          "f1": 0.038159371492704826,
+          "false_alarms_per_min": 11.75075304615399,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5544479653064576,
+          "precision": 0.2073170731707317,
+          "recall": 0.02103960396039604,
+          "f1": 0.03820224719101124,
+          "false_alarms_per_min": 11.572711333333475,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5602804080853551,
+          "precision": 0.19753086419753085,
+          "recall": 0.019801980198019802,
+          "f1": 0.03599550056242969,
+          "false_alarms_per_min": 11.572711333333475,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5661128508642524,
+          "precision": 0.2,
+          "recall": 0.019801980198019802,
+          "f1": 0.036036036036036036,
+          "false_alarms_per_min": 11.39466962051296,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5719452936431499,
+          "precision": 0.2077922077922078,
+          "recall": 0.019801980198019802,
+          "f1": 0.03615819209039549,
+          "false_alarms_per_min": 10.860544482051415,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.139995098114014,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5777777364220473,
+          "precision": 0.19736842105263158,
+          "recall": 0.018564356435643563,
+          "f1": 0.033936651583710405,
+          "false_alarms_per_min": 10.860544482051415,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.179995059967041,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5836101792009448,
+          "precision": 0.20270270270270271,
+          "recall": 0.018564356435643563,
+          "f1": 0.03401360544217687,
+          "false_alarms_per_min": 10.504461056410385,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.179995059967041,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5894426219798422,
+          "precision": 0.21428571428571427,
+          "recall": 0.018564356435643563,
+          "f1": 0.03416856492027335,
+          "false_alarms_per_min": 9.792294205128325,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.179995059967041,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.5952750647587397,
+          "precision": 0.21739130434782608,
+          "recall": 0.018564356435643563,
+          "f1": 0.034207525655644236,
+          "false_alarms_per_min": 9.61425249230781,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.179995059967041,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6011075075376372,
+          "precision": 0.22388059701492538,
+          "recall": 0.018564356435643563,
+          "f1": 0.03428571428571428,
+          "false_alarms_per_min": 9.25816906666678,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.179995059967041,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6069399503165346,
+          "precision": 0.23809523809523808,
+          "recall": 0.018564356435643563,
+          "f1": 0.03444316877152698,
+          "false_alarms_per_min": 8.54600221538472,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 5.179995059967041,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6127723930954321,
+          "precision": 0.21311475409836064,
+          "recall": 0.01608910891089109,
+          "f1": 0.029919447640966632,
+          "false_alarms_per_min": 8.54600221538472,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6186048358743295,
+          "precision": 0.21311475409836064,
+          "recall": 0.01608910891089109,
+          "f1": 0.029919447640966632,
+          "false_alarms_per_min": 8.54600221538472,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.624437278653227,
+          "precision": 0.22033898305084745,
+          "recall": 0.01608910891089109,
+          "f1": 0.029988465974625147,
+          "false_alarms_per_min": 8.18991878974369,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6302697214321243,
+          "precision": 0.22033898305084745,
+          "recall": 0.01608910891089109,
+          "f1": 0.029988465974625147,
+          "false_alarms_per_min": 8.18991878974369,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6361021642110218,
+          "precision": 0.22033898305084745,
+          "recall": 0.01608910891089109,
+          "f1": 0.029988465974625147,
+          "false_alarms_per_min": 8.18991878974369,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6419346069899193,
+          "precision": 0.21052631578947367,
+          "recall": 0.01485148514851485,
+          "f1": 0.02774566473988439,
+          "false_alarms_per_min": 8.011877076923176,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6477670497688167,
+          "precision": 0.2222222222222222,
+          "recall": 0.01485148514851485,
+          "f1": 0.02784222737819025,
+          "false_alarms_per_min": 7.47775193846163,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6535994925477142,
+          "precision": 0.23076923076923078,
+          "recall": 0.01485148514851485,
+          "f1": 0.027906976744186046,
+          "false_alarms_per_min": 7.1216685128206,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6594319353266116,
+          "precision": 0.24,
+          "recall": 0.01485148514851485,
+          "f1": 0.02797202797202797,
+          "false_alarms_per_min": 6.76558508717957,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6652643781055091,
+          "precision": 0.24,
+          "recall": 0.01485148514851485,
+          "f1": 0.02797202797202797,
+          "false_alarms_per_min": 6.76558508717957,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6710968208844065,
+          "precision": 0.24489795918367346,
+          "recall": 0.01485148514851485,
+          "f1": 0.028004667444574093,
+          "false_alarms_per_min": 6.587543374359055,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.059993267059326,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.676929263663304,
+          "precision": 0.21739130434782608,
+          "recall": 0.012376237623762377,
+          "f1": 0.023419203747072598,
+          "false_alarms_per_min": 6.40950166153854,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.139993190765381,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6827617064422015,
+          "precision": 0.2222222222222222,
+          "recall": 0.012376237623762377,
+          "f1": 0.023446658851113716,
+          "false_alarms_per_min": 6.231459948718025,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.139993190765381,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6885941492210989,
+          "precision": 0.22727272727272727,
+          "recall": 0.012376237623762377,
+          "f1": 0.023474178403755867,
+          "false_alarms_per_min": 6.05341823589751,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.139993190765381,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 0.6944265919999963,
+          "precision": 0.23809523809523808,
+          "recall": 0.012376237623762377,
+          "f1": 0.023529411764705882,
+          "false_alarms_per_min": 5.69733481025648,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 7.139993190765381,
+          "median_delay_s": 6.299993991851807
+        }
+      ]
+    },
+    "msvdd": {
+      "best_f1_operating_point": {
+        "threshold": 0.03370010136453779,
+        "precision": 0.2657376261412782,
+        "recall": 0.6844059405940595,
+        "f1": 0.3828314295604015,
+        "false_alarms_per_min": 261.1968302932898,
+        "event_recall": 1.0,
+        "mean_delay_s": 0.07142846924918038,
+        "median_delay_s": 0.0
+      },
+      "curve": [
+        {
+          "threshold": 0.010481664035,
+          "precision": 0.18741226017781937,
+          "recall": 0.9913366336633663,
+          "f1": 0.3152302243211334,
+          "false_alarms_per_min": 593.6757798485572,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.012592431064957981,
+          "precision": 0.1891314665401044,
+          "recall": 0.9863861386138614,
+          "f1": 0.31740342493030665,
+          "false_alarms_per_min": 584.1031211467089,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.014703198094915961,
+          "precision": 0.1923356779044385,
+          "recall": 0.9814356435643564,
+          "f1": 0.32163861285743256,
+          "false_alarms_per_min": 569.2313120920517,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.016813965124873945,
+          "precision": 0.1975,
+          "recall": 0.9777227722772277,
+          "f1": 0.3286189683860233,
+          "false_alarms_per_min": 548.7184720166624,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.018924732154831925,
+          "precision": 0.20404984423676012,
+          "recall": 0.9727722772277227,
+          "f1": 0.33733905579399137,
+          "false_alarms_per_min": 524.1030639261953,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.021035499184789905,
+          "precision": 0.2112676056338028,
+          "recall": 0.9653465346534653,
+          "f1": 0.3466666666666667,
+          "false_alarms_per_min": 497.77825249611243,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.023146266214747885,
+          "precision": 0.22057566258193217,
+          "recall": 0.9579207920792079,
+          "f1": 0.3585823488533704,
+          "false_alarms_per_min": 467.5218133849133,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.02525703324470587,
+          "precision": 0.23235113566605278,
+          "recall": 0.9368811881188119,
+          "f1": 0.37235612395474665,
+          "false_alarms_per_min": 427.52177523790425,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.027367800274663852,
+          "precision": 0.24198931909212282,
+          "recall": 0.8972772277227723,
+          "f1": 0.3811777076761304,
+          "false_alarms_per_min": 388.20549842674154,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.029478567304621832,
+          "precision": 0.24962235649546827,
+          "recall": 0.818069306930693,
+          "f1": 0.38252314814814814,
+          "false_alarms_per_min": 339.65844358165367,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.03158933433457981,
+          "precision": 0.25359256128486896,
+          "recall": 0.7425742574257426,
+          "f1": 0.3780718336483932,
+          "false_alarms_per_min": 301.8806297761451,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.07142846924918038,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.03370010136453779,
+          "precision": 0.2657376261412782,
+          "recall": 0.6844059405940595,
+          "f1": 0.3828314295604015,
+          "false_alarms_per_min": 261.1968302932898,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.07142846924918038,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.03581086839449577,
+          "precision": 0.24945295404814005,
+          "recall": 0.5643564356435643,
+          "f1": 0.34597875569044007,
+          "false_alarms_per_min": 234.53013819528374,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.07142846924918038,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.03792163542445376,
+          "precision": 0.24830560690080097,
+          "recall": 0.49876237623762376,
+          "f1": 0.3315508021390374,
+          "false_alarms_per_min": 208.54720743312404,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.8999991416931152,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.04003240245441174,
+          "precision": 0.24130879345603273,
+          "recall": 0.4381188118811881,
+          "f1": 0.31120879120879125,
+          "false_alarms_per_min": 190.2565916992353,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.8999991416931152,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.04214316948436972,
+          "precision": 0.243202416918429,
+          "recall": 0.39851485148514854,
+          "f1": 0.3020637898686679,
+          "false_alarms_per_min": 171.28221462950023,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9142848423549107,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.0442539365143277,
+          "precision": 0.24898949070331447,
+          "recall": 0.3811881188118812,
+          "f1": 0.3012224938875306,
+          "false_alarms_per_min": 158.8035702503051,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9142848423549107,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.04636470354428568,
+          "precision": 0.2521150592216582,
+          "recall": 0.3688118811881188,
+          "f1": 0.29949748743718596,
+          "false_alarms_per_min": 151.11125522203415,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9142848423549107,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.04847547057424366,
+          "precision": 0.2551662174303684,
+          "recall": 0.35148514851485146,
+          "f1": 0.2956793336803748,
+          "false_alarms_per_min": 141.7095368541474,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9142848423549107,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.050586237604201646,
+          "precision": 0.25770308123249297,
+          "recall": 0.3415841584158416,
+          "f1": 0.29377328366152206,
+          "false_alarms_per_min": 135.89756549945378,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9142848423549107,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.052697004634159626,
+          "precision": 0.26588465298142716,
+          "recall": 0.33663366336633666,
+          "f1": 0.2971054068814855,
+          "false_alarms_per_min": 128.37619080514438,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9142848423549107,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.054807771664117606,
+          "precision": 0.2736520854526958,
+          "recall": 0.33292079207920794,
+          "f1": 0.30039084310441094,
+          "false_alarms_per_min": 122.05139844856603,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.9285705430167062,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.056918538694075586,
+          "precision": 0.27783669141039236,
+          "recall": 0.32425742574257427,
+          "f1": 0.29925756710451173,
+          "false_alarms_per_min": 116.41036742783399,
+          "event_recall": 1.0,
+          "mean_delay_s": 1.3571415628705705,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.059029305724033566,
+          "precision": 0.2808988764044944,
+          "recall": 0.3094059405940594,
+          "f1": 0.2944640753828033,
+          "false_alarms_per_min": 109.40181373540933,
+          "event_recall": 1.0,
+          "mean_delay_s": 1.3571415628705705,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.061140072753991546,
+          "precision": 0.2850467289719626,
+          "recall": 0.30198019801980197,
+          "f1": 0.2932692307692308,
+          "false_alarms_per_min": 104.61548438448517,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.21428166116987,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.06325083978394953,
+          "precision": 0.28867235079171744,
+          "recall": 0.2933168316831683,
+          "f1": 0.29097605893186,
+          "false_alarms_per_min": 99.82915503356101,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.228567395891462,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.06536160681390751,
+          "precision": 0.29140722291407223,
+          "recall": 0.2896039603960396,
+          "f1": 0.29050279329608936,
+          "false_alarms_per_min": 97.26505002413735,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.228567395891462,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.0674723738438655,
+          "precision": 0.2935897435897436,
+          "recall": 0.2834158415841584,
+          "f1": 0.2884130982367758,
+          "false_alarms_per_min": 94.18812401282896,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.599993705749512,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.06958314087382347,
+          "precision": 0.29750982961992134,
+          "recall": 0.28094059405940597,
+          "f1": 0.28898790579248884,
+          "false_alarms_per_min": 91.62401900340531,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.242850235530308,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.07169390790378145,
+          "precision": 0.3010752688172043,
+          "recall": 0.27722772277227725,
+          "f1": 0.288659793814433,
+          "false_alarms_per_min": 88.88897366002008,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.257135936192104,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.07380467493373945,
+          "precision": 0.30506155950752395,
+          "recall": 0.275990099009901,
+          "f1": 0.28979857050032487,
+          "false_alarms_per_min": 86.83768965248116,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.257135936192104,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.07591544196369743,
+          "precision": 0.3101983002832861,
+          "recall": 0.27103960396039606,
+          "f1": 0.2892998678996037,
+          "false_alarms_per_min": 83.24794263928804,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.257135936192104,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.07802620899365541,
+          "precision": 0.3118594436310395,
+          "recall": 0.2636138613861386,
+          "f1": 0.28571428571428575,
+          "false_alarms_per_min": 80.34195696194122,
+          "event_recall": 1.0,
+          "mean_delay_s": 8.714277403695244,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.08013697602361339,
+          "precision": 0.3086232980332829,
+          "recall": 0.2524752475247525,
+          "f1": 0.2777399591558884,
+          "false_alarms_per_min": 78.11973262044073,
+          "event_recall": 1.0,
+          "mean_delay_s": 8.714277403695244,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.08224774305357137,
+          "precision": 0.3068535825545171,
+          "recall": 0.2438118811881188,
+          "f1": 0.2717241379310345,
+          "false_alarms_per_min": 76.0684486129018,
+          "event_recall": 1.0,
+          "mean_delay_s": 8.714277403695244,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.08435851008352935,
+          "precision": 0.30317460317460315,
+          "recall": 0.23638613861386137,
+          "f1": 0.26564673157162727,
+          "false_alarms_per_min": 75.04280660913234,
+          "event_recall": 1.0,
+          "mean_delay_s": 8.885705811636788,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.08646927711348733,
+          "precision": 0.30049261083743845,
+          "recall": 0.2264851485148515,
+          "f1": 0.2582921665490473,
+          "false_alarms_per_min": 72.82058226763183,
+          "event_recall": 1.0,
+          "mean_delay_s": 8.91427721296038,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.08858004414344531,
+          "precision": 0.3037542662116041,
+          "recall": 0.2202970297029703,
+          "f1": 0.2553802008608322,
+          "false_alarms_per_min": 69.74365625632345,
+          "event_recall": 1.0,
+          "mean_delay_s": 8.91427721296038,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.0906908111734033,
+          "precision": 0.2982142857142857,
+          "recall": 0.20668316831683167,
+          "f1": 0.2441520467836257,
+          "false_alarms_per_min": 67.17955124689979,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.328561612537928,
+          "median_delay_s": 10.099990606307983
+        },
+        {
+          "threshold": 0.09280157820336128,
+          "precision": 0.308411214953271,
+          "recall": 0.2042079207920792,
+          "f1": 0.24571854058078926,
+          "false_alarms_per_min": 63.247923565783516,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.342847313199725,
+          "median_delay_s": 10.099990606307983
+        },
+        {
+          "threshold": 0.09491234523331926,
+          "precision": 0.3065134099616858,
+          "recall": 0.19801980198019803,
+          "f1": 0.2406015037593985,
+          "false_alarms_per_min": 61.880400894090904,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.342847313199725,
+          "median_delay_s": 10.099990606307983
+        },
+        {
+          "threshold": 0.09702311226327724,
+          "precision": 0.3,
+          "recall": 0.18564356435643564,
+          "f1": 0.22935779816513763,
+          "false_alarms_per_min": 59.82911688655198,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.357132979801722,
+          "median_delay_s": 10.099990606307983
+        },
+        {
+          "threshold": 0.09913387929323522,
+          "precision": 0.2966804979253112,
+          "recall": 0.17698019801980197,
+          "f1": 0.22170542635658916,
+          "false_alarms_per_min": 57.94877321297463,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.414275748389107,
+          "median_delay_s": 10.199990272521973
+        },
+        {
+          "threshold": 0.1012446463231932,
+          "precision": 0.2955032119914347,
+          "recall": 0.1707920792079208,
+          "f1": 0.21647058823529414,
+          "false_alarms_per_min": 56.23936987335886,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.642846958977836,
+          "median_delay_s": 10.199990272521973
+        },
+        {
+          "threshold": 0.10335541335315118,
+          "precision": 0.2989010989010989,
+          "recall": 0.16831683168316833,
+          "f1": 0.21536025336500397,
+          "false_alarms_per_min": 54.529966533743085,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.671418394361224,
+          "median_delay_s": 10.199990272521973
+        },
+        {
+          "threshold": 0.10546618038310916,
+          "precision": 0.3047404063205418,
+          "recall": 0.1670792079207921,
+          "f1": 0.21582733812949642,
+          "false_alarms_per_min": 52.64962286016574,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.728561197008405,
+          "median_delay_s": 10.199990272521973
+        },
+        {
+          "threshold": 0.10757694741306714,
+          "precision": 0.3087557603686636,
+          "recall": 0.16584158415841585,
+          "f1": 0.21578099838969406,
+          "false_alarms_per_min": 51.28210018847312,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.142845562526158,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.10968771444302512,
+          "precision": 0.3107476635514019,
+          "recall": 0.1646039603960396,
+          "f1": 0.21521035598705504,
+          "false_alarms_per_min": 50.427398518665235,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.142845562526158,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.1117984814729831,
+          "precision": 0.315035799522673,
+          "recall": 0.16336633663366337,
+          "f1": 0.21515892420537897,
+          "false_alarms_per_min": 49.05987584697262,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.142845562526158,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.1139092485029411,
+          "precision": 0.32195121951219513,
+          "recall": 0.16336633663366337,
+          "f1": 0.21674876847290644,
+          "false_alarms_per_min": 47.52141284131843,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.142845562526158,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.11602001553289908,
+          "precision": 0.3291139240506329,
+          "recall": 0.1608910891089109,
+          "f1": 0.21612635078969242,
+          "false_alarms_per_min": 45.29918849981792,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.271416868482317,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.11813078256285706,
+          "precision": 0.3324742268041237,
+          "recall": 0.15965346534653466,
+          "f1": 0.21571906354515052,
+          "false_alarms_per_min": 44.27354649604846,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.371416739055089,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.12024154959281504,
+          "precision": 0.337696335078534,
+          "recall": 0.15965346534653466,
+          "f1": 0.21680672268907564,
+          "false_alarms_per_min": 43.247904492279,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.39998814037868,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.12235231662277302,
+          "precision": 0.34308510638297873,
+          "recall": 0.15965346534653466,
+          "f1": 0.2179054054054054,
+          "false_alarms_per_min": 42.222262488509536,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.39998814037868,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.124463083652731,
+          "precision": 0.3450134770889488,
+          "recall": 0.15841584158415842,
+          "f1": 0.2171331636980492,
+          "false_alarms_per_min": 41.53850115266323,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.39998814037868,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.12657385068268898,
+          "precision": 0.34688346883468835,
+          "recall": 0.15841584158415842,
+          "f1": 0.21750212404418012,
+          "false_alarms_per_min": 41.19662048474007,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.39998814037868,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.12868461771264694,
+          "precision": 0.3518005540166205,
+          "recall": 0.15717821782178218,
+          "f1": 0.21727972626176223,
+          "false_alarms_per_min": 40.000038147009036,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.414273841040474,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.13079538474260494,
+          "precision": 0.35492957746478876,
+          "recall": 0.15594059405940594,
+          "f1": 0.21668099742046434,
+          "false_alarms_per_min": 39.14533647720115,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.414273841040474,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.1329061517725629,
+          "precision": 0.3633720930232558,
+          "recall": 0.1547029702970297,
+          "f1": 0.21701388888888887,
+          "false_alarms_per_min": 37.43593313758538,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.414273841040474,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 0.1350169188025209,
+          "precision": 0.3663663663663664,
+          "recall": 0.15099009900990099,
+          "f1": 0.2138475021910605,
+          "false_alarms_per_min": 36.06841046589276,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.642842190606254,
+          "median_delay_s": 14.09998631477356
+        },
+        {
+          "threshold": 0.1371276858324789,
+          "precision": 0.3715170278637771,
+          "recall": 0.1485148514851485,
+          "f1": 0.21220159151193635,
+          "false_alarms_per_min": 34.70088779420015,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.642842190606254,
+          "median_delay_s": 14.09998631477356
+        },
+        {
+          "threshold": 0.13923845286243686,
+          "precision": 0.3706070287539936,
+          "recall": 0.14356435643564355,
+          "f1": 0.20695807314897413,
+          "false_alarms_per_min": 33.67524579043069,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.642842190606254,
+          "median_delay_s": 14.09998631477356
+        },
+        {
+          "threshold": 0.14134921989239485,
+          "precision": 0.3782894736842105,
+          "recall": 0.14232673267326731,
+          "f1": 0.20683453237410068,
+          "false_alarms_per_min": 32.30772311873807,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.642842190606254,
+          "median_delay_s": 14.09998631477356
+        },
+        {
+          "threshold": 0.14345998692235282,
+          "precision": 0.3728813559322034,
+          "recall": 0.13613861386138615,
+          "f1": 0.19945602901178605,
+          "false_alarms_per_min": 31.623961782891758,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.671413591929845,
+          "median_delay_s": 14.299986124038696
+        },
+        {
+          "threshold": 0.1455707539523108,
+          "precision": 0.3737024221453287,
+          "recall": 0.13366336633663367,
+          "f1": 0.19690063810391975,
+          "false_alarms_per_min": 30.940200447045452,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.699984993253436,
+          "median_delay_s": 14.299986124038696
+        },
+        {
+          "threshold": 0.1476815209822688,
+          "precision": 0.3736654804270463,
+          "recall": 0.12995049504950495,
+          "f1": 0.1928374655647383,
+          "false_alarms_per_min": 30.085498777237564,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.699984993253436,
+          "median_delay_s": 14.299986124038696
+        },
+        {
+          "threshold": 0.14979228801222677,
+          "precision": 0.375,
+          "recall": 0.12623762376237624,
+          "f1": 0.18888888888888888,
+          "false_alarms_per_min": 29.059856773468102,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.699984993253436,
+          "median_delay_s": 14.299986124038696
+        },
+        {
+          "threshold": 0.15190305504218476,
+          "precision": 0.38202247191011235,
+          "recall": 0.12623762376237624,
+          "f1": 0.18976744186046515,
+          "false_alarms_per_min": 28.205155103660218,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.699984993253436,
+          "median_delay_s": 14.299986124038696
+        },
+        {
+          "threshold": 0.15401382207214273,
+          "precision": 0.3831417624521073,
+          "recall": 0.12376237623762376,
+          "f1": 0.1870907390084191,
+          "false_alarms_per_min": 27.52139376781391,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.699984993253436,
+          "median_delay_s": 14.299986124038696
+        },
+        {
+          "threshold": 0.15612458910210072,
+          "precision": 0.3779527559055118,
+          "recall": 0.1188118811881188,
+          "f1": 0.1807909604519774,
+          "false_alarms_per_min": 27.008572765929177,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.757127795900617,
+          "median_delay_s": 14.499985933303833
+        },
+        {
+          "threshold": 0.1582353561320587,
+          "precision": 0.3868312757201646,
+          "recall": 0.11633663366336634,
+          "f1": 0.1788772597526166,
+          "false_alarms_per_min": 25.470109760274983,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.871413503374372,
+          "median_delay_s": 14.499985933303833
+        },
+        {
+          "threshold": 0.16034612316201668,
+          "precision": 0.38235294117647056,
+          "recall": 0.11262376237623763,
+          "f1": 0.1739961759082218,
+          "false_alarms_per_min": 25.12822909235183,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.899984904697963,
+          "median_delay_s": 14.499985933303833
+        },
+        {
+          "threshold": 0.16245689019197465,
+          "precision": 0.36637931034482757,
+          "recall": 0.1051980198019802,
+          "f1": 0.16346153846153846,
+          "false_alarms_per_min": 25.12822909235183,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.133318066596985,
+          "median_delay_s": 15.699985265731812
+        },
+        {
+          "threshold": 0.16456765722193265,
+          "precision": 0.37333333333333335,
+          "recall": 0.10396039603960396,
+          "f1": 0.16263310745401743,
+          "false_alarms_per_min": 24.102587088582368,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.283317804336548,
+          "median_delay_s": 15.999984741210938
+        },
+        {
+          "threshold": 0.1666784242518906,
+          "precision": 0.3632075471698113,
+          "recall": 0.0952970297029703,
+          "f1": 0.15098039215686274,
+          "false_alarms_per_min": 23.076945084812905,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.349984407424927,
+          "median_delay_s": 15.999984741210938
+        },
+        {
+          "threshold": 0.1687891912818486,
+          "precision": 0.36764705882352944,
+          "recall": 0.09282178217821782,
+          "f1": 0.1482213438735178,
+          "false_alarms_per_min": 22.051303081043443,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.1708999583118066,
+          "precision": 0.36548223350253806,
+          "recall": 0.0891089108910891,
+          "f1": 0.14328358208955225,
+          "false_alarms_per_min": 21.367541745197133,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.17301072534176457,
+          "precision": 0.3492063492063492,
+          "recall": 0.08168316831683169,
+          "f1": 0.13239719157472418,
+          "false_alarms_per_min": 21.02566107727398,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.17512149237172256,
+          "precision": 0.35135135135135137,
+          "recall": 0.08044554455445545,
+          "f1": 0.1309164149043303,
+          "false_alarms_per_min": 20.51284007538925,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.17723225940168053,
+          "precision": 0.3425414364640884,
+          "recall": 0.07673267326732673,
+          "f1": 0.12537917087967643,
+          "false_alarms_per_min": 20.34189974142767,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.17934302643163852,
+          "precision": 0.32571428571428573,
+          "recall": 0.07054455445544554,
+          "f1": 0.11597151576805695,
+          "false_alarms_per_min": 20.170959407466096,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.18145379346159649,
+          "precision": 0.3179190751445087,
+          "recall": 0.06806930693069307,
+          "f1": 0.11213047910295616,
+          "false_alarms_per_min": 20.170959407466096,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.18356456049155448,
+          "precision": 0.3176470588235294,
+          "recall": 0.06683168316831684,
+          "f1": 0.11042944785276074,
+          "false_alarms_per_min": 19.82907873954294,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.18567532752151245,
+          "precision": 0.32335329341317365,
+          "recall": 0.06683168316831684,
+          "f1": 0.11076923076923076,
+          "false_alarms_per_min": 19.31625773765821,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.39998435974121,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.18778609455147044,
+          "precision": 0.3148148148148148,
+          "recall": 0.06311881188118812,
+          "f1": 0.10515463917525775,
+          "false_alarms_per_min": 18.974377069735056,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.416651010513306,
+          "median_delay_s": 16.099984645843506
+        },
+        {
+          "threshold": 0.1898968615814284,
+          "precision": 0.3137254901960784,
+          "recall": 0.0594059405940594,
+          "f1": 0.09989594172736731,
+          "false_alarms_per_min": 17.948735065965593,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.49998422463735,
+          "median_delay_s": 16.199984550476074
+        },
+        {
+          "threshold": 0.1920076286113864,
+          "precision": 0.3087248322147651,
+          "recall": 0.05693069306930693,
+          "f1": 0.09613375130616511,
+          "false_alarms_per_min": 17.60685439804244,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.549984176953632,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.1941183956413444,
+          "precision": 0.30344827586206896,
+          "recall": 0.054455445544554455,
+          "f1": 0.09233997901364113,
+          "false_alarms_per_min": 17.264973730119284,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.549984176953632,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.19622916267130236,
+          "precision": 0.30344827586206896,
+          "recall": 0.054455445544554455,
+          "f1": 0.09233997901364113,
+          "false_alarms_per_min": 17.264973730119284,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.549984176953632,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.19833992970126035,
+          "precision": 0.29285714285714287,
+          "recall": 0.050742574257425746,
+          "f1": 0.08649789029535866,
+          "false_alarms_per_min": 16.92309306219613,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.549984176953632,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.20045069673121832,
+          "precision": 0.2740740740740741,
+          "recall": 0.04579207920792079,
+          "f1": 0.0784729586426299,
+          "false_alarms_per_min": 16.752152728234552,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.2025614637611763,
+          "precision": 0.2748091603053435,
+          "recall": 0.04455445544554455,
+          "f1": 0.07667731629392971,
+          "false_alarms_per_min": 16.23933172634982,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.20467223079113428,
+          "precision": 0.2755905511811024,
+          "recall": 0.043316831683168314,
+          "f1": 0.0748663101604278,
+          "false_alarms_per_min": 15.726510724465092,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.20678299782109227,
+          "precision": 0.2755905511811024,
+          "recall": 0.043316831683168314,
+          "f1": 0.0748663101604278,
+          "false_alarms_per_min": 15.726510724465092,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.20889376485105024,
+          "precision": 0.2661290322580645,
+          "recall": 0.04084158415841584,
+          "f1": 0.07081545064377683,
+          "false_alarms_per_min": 15.555570390503513,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.21100453188100823,
+          "precision": 0.2605042016806723,
+          "recall": 0.038366336633663366,
+          "f1": 0.0668824163969795,
+          "false_alarms_per_min": 15.042749388618782,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.2131152989109662,
+          "precision": 0.2608695652173913,
+          "recall": 0.03712871287128713,
+          "f1": 0.06500541711809317,
+          "false_alarms_per_min": 14.529928386734051,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.2152260659409242,
+          "precision": 0.26548672566371684,
+          "recall": 0.03712871287128713,
+          "f1": 0.06514657980456026,
+          "false_alarms_per_min": 14.188047718810898,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.2173368329708822,
+          "precision": 0.2803738317757009,
+          "recall": 0.03712871287128713,
+          "f1": 0.06557377049180328,
+          "false_alarms_per_min": 13.162405715041436,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 16.566650867462158,
+          "median_delay_s": 16.299984455108643
+        },
+        {
+          "threshold": 0.21944760000084015,
+          "precision": 0.2830188679245283,
+          "recall": 0.03712871287128713,
+          "f1": 0.06564551422319474,
+          "false_alarms_per_min": 12.991465381079857,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 17.116650342941284,
+          "median_delay_s": 17.399983406066895
+        },
+        {
+          "threshold": 0.22155836703079815,
+          "precision": 0.2857142857142857,
+          "recall": 0.03712871287128713,
+          "f1": 0.06571741511500548,
+          "false_alarms_per_min": 12.82052504711828,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 17.116650342941284,
+          "median_delay_s": 17.399983406066895
+        },
+        {
+          "threshold": 0.22366913406075611,
+          "precision": 0.27722772277227725,
+          "recall": 0.034653465346534656,
+          "f1": 0.06160616061606161,
+          "false_alarms_per_min": 12.478644379195126,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 17.13331699371338,
+          "median_delay_s": 17.399983406066895
+        },
+        {
+          "threshold": 0.2257799010907141,
+          "precision": 0.2828282828282828,
+          "recall": 0.034653465346534656,
+          "f1": 0.061742006615215,
+          "false_alarms_per_min": 12.136763711271973,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 17.13331699371338,
+          "median_delay_s": 17.399983406066895
+        },
+        {
+          "threshold": 0.22789066812067207,
+          "precision": 0.2916666666666667,
+          "recall": 0.034653465346534656,
+          "f1": 0.06194690265486726,
+          "false_alarms_per_min": 11.623942709387242,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 17.13331699371338,
+          "median_delay_s": 17.399983406066895
+        },
+        {
+          "threshold": 0.23000143515063007,
+          "precision": 0.28735632183908044,
+          "recall": 0.03094059405940594,
+          "f1": 0.055865921787709494,
+          "false_alarms_per_min": 10.59830070561778,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.116641759872437,
+          "median_delay_s": 29.64997172355652
+        },
+        {
+          "threshold": 0.23211220218058803,
+          "precision": 0.2926829268292683,
+          "recall": 0.0297029702970297,
+          "f1": 0.05393258426966292,
+          "false_alarms_per_min": 9.91453936977147,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.149975061416626,
+          "median_delay_s": 29.749971628189087
+        },
+        {
+          "threshold": 0.23422296921054603,
+          "precision": 0.2911392405063291,
+          "recall": 0.028465346534653466,
+          "f1": 0.05186020293122886,
+          "false_alarms_per_min": 9.572658701848317,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.149975061416626,
+          "median_delay_s": 29.749971628189087
+        },
+        {
+          "threshold": 0.23633373624050402,
+          "precision": 0.2631578947368421,
+          "recall": 0.024752475247524754,
+          "f1": 0.04524886877828054,
+          "false_alarms_per_min": 9.572658701848317,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.499974727630615,
+          "median_delay_s": 29.749971628189087
+        },
+        {
+          "threshold": 0.238444503270462,
+          "precision": 0.2638888888888889,
+          "recall": 0.023514851485148515,
+          "f1": 0.043181818181818175,
+          "false_alarms_per_min": 9.059837699963586,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.533308029174805,
+          "median_delay_s": 29.79997158050537
+        },
+        {
+          "threshold": 0.24055527030041998,
+          "precision": 0.25,
+          "recall": 0.02103960396039604,
+          "f1": 0.03881278538812785,
+          "false_alarms_per_min": 8.717957032040431,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.566641251246136,
+          "median_delay_s": 29.849971413612366
+        },
+        {
+          "threshold": 0.24266603733037795,
+          "precision": 0.22727272727272727,
+          "recall": 0.018564356435643563,
+          "f1": 0.034324942791762014,
+          "false_alarms_per_min": 8.717957032040431,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.566641251246136,
+          "median_delay_s": 29.849971413612366
+        },
+        {
+          "threshold": 0.24477680436033594,
+          "precision": 0.2222222222222222,
+          "recall": 0.017326732673267328,
+          "f1": 0.03214695752009185,
+          "false_alarms_per_min": 8.376076364117276,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.566641251246136,
+          "median_delay_s": 29.849971413612366
+        },
+        {
+          "threshold": 0.2468875713902939,
+          "precision": 0.22033898305084745,
+          "recall": 0.01608910891089109,
+          "f1": 0.029988465974625147,
+          "false_alarms_per_min": 7.863255362232546,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.966640949249268,
+          "median_delay_s": 29.849971413612366
+        },
+        {
+          "threshold": 0.2489983384202519,
+          "precision": 0.22807017543859648,
+          "recall": 0.01608910891089109,
+          "f1": 0.03005780346820809,
+          "false_alarms_per_min": 7.521374694309391,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.966640949249268,
+          "median_delay_s": 29.849971413612366
+        },
+        {
+          "threshold": 0.25110910545020987,
+          "precision": 0.23636363636363636,
+          "recall": 0.01608910891089109,
+          "f1": 0.030127462340672075,
+          "false_alarms_per_min": 7.179494026386237,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.966640949249268,
+          "median_delay_s": 29.849971413612366
+        },
+        {
+          "threshold": 0.25321987248016786,
+          "precision": 0.19607843137254902,
+          "recall": 0.012376237623762377,
+          "f1": 0.02328288707799767,
+          "false_alarms_per_min": 7.00855369242466,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.999974211057026,
+          "median_delay_s": 29.849971413612366
+        },
+        {
+          "threshold": 0.2553306395101258,
+          "precision": 0.1836734693877551,
+          "recall": 0.011138613861386138,
+          "f1": 0.021003500583430573,
+          "false_alarms_per_min": 6.837613358463083,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 27.0499742825826,
+          "median_delay_s": 29.89997148513794
+        },
+        {
+          "threshold": 0.2574414065400838,
+          "precision": 0.1875,
+          "recall": 0.011138613861386138,
+          "f1": 0.02102803738317757,
+          "false_alarms_per_min": 6.666673024501506,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 28.749972542126972,
+          "median_delay_s": 31.599969744682312
+        },
+        {
+          "threshold": 0.2595521735700418,
+          "precision": 0.18181818181818182,
+          "recall": 0.009900990099009901,
+          "f1": 0.018779342723004695,
+          "false_alarms_per_min": 6.153852022616775,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 28.89997229576111,
+          "median_delay_s": 34.89996647834778
+        },
+        {
+          "threshold": 0.2616629405999998,
+          "precision": 0.18181818181818182,
+          "recall": 0.009900990099009901,
+          "f1": 0.018779342723004695,
+          "false_alarms_per_min": 6.153852022616775,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 28.89997229576111,
+          "median_delay_s": 34.89996647834778
+        }
+      ]
+    },
+    "ae": {
+      "best_f1_operating_point": {
+        "threshold": 0.1439304904868403,
+        "precision": 0.35277905374368396,
+        "recall": 0.9504950495049505,
+        "f1": 0.5145728643216081,
+        "false_alarms_per_min": 240.8549305518621,
+        "event_recall": 1.0,
+        "mean_delay_s": 0.0,
+        "median_delay_s": 0.0
+      },
+      "curve": [
+        {
+          "threshold": 0.002348919631,
+          "precision": 0.18905007019185774,
+          "recall": 1.0,
+          "f1": 0.3179850452577725,
+          "false_alarms_per_min": 592.4791975108261,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.03066523380216806,
+          "precision": 0.2160427807486631,
+          "recall": 1.0,
+          "f1": 0.3553210202286719,
+          "false_alarms_per_min": 501.197059175344,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.05898154797333612,
+          "precision": 0.25497002208898706,
+          "recall": 1.0,
+          "f1": 0.4063364344983656,
+          "false_alarms_per_min": 403.5901284832835,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.08729786214450419,
+          "precision": 0.29156102861282146,
+          "recall": 0.9962871287128713,
+          "f1": 0.4511067525917624,
+          "false_alarms_per_min": 334.35929322884476,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.11561417631567225,
+          "precision": 0.3297071129707113,
+          "recall": 0.9752475247524752,
+          "f1": 0.49280800500312694,
+          "false_alarms_per_min": 273.8464150064465,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.1439304904868403,
+          "precision": 0.35277905374368396,
+          "recall": 0.9504950495049505,
+          "f1": 0.5145728643216081,
+          "false_alarms_per_min": 240.8549305518621,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.17224680465800837,
+          "precision": 0.3501786625829505,
+          "recall": 0.849009900990099,
+          "f1": 0.4958438742320203,
+          "false_alarms_per_min": 217.6070451330876,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.20056311882917643,
+          "precision": 0.3378302417088252,
+          "recall": 0.7438118811881188,
+          "f1": 0.4646308465403943,
+          "false_alarms_per_min": 201.3677134067378,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.2288794330003445,
+          "precision": 0.33698964046313223,
+          "recall": 0.6844059405940595,
+          "f1": 0.45161290322580644,
+          "false_alarms_per_min": 185.98308335019587,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.25719574717151256,
+          "precision": 0.3383705650459921,
+          "recall": 0.6373762376237624,
+          "f1": 0.4420600858369099,
+          "false_alarms_per_min": 172.13691629930813,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.2855120613426806,
+          "precision": 0.3404696132596685,
+          "recall": 0.6101485148514851,
+          "f1": 0.4370567375886525,
+          "false_alarms_per_min": 163.2480189333061,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.3138283755138486,
+          "precision": 0.34475218658892126,
+          "recall": 0.5853960396039604,
+          "f1": 0.43394495412844036,
+          "false_alarms_per_min": 153.6753602314578,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.3421446896850167,
+          "precision": 0.3479599692070824,
+          "recall": 0.5594059405940595,
+          "f1": 0.429046037019459,
+          "false_alarms_per_min": 144.78646286545577,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.3704610038561848,
+          "precision": 0.3395161290322581,
+          "recall": 0.5210396039603961,
+          "f1": 0.41113281250000006,
+          "false_alarms_per_min": 140.00013351453163,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.01428570066179548,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.39877731802735283,
+          "precision": 0.32096635030198445,
+          "recall": 0.4603960396039604,
+          "f1": 0.37824097610574475,
+          "false_alarms_per_min": 134.53004282776115,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.45714242117745535,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.42709363219852087,
+          "precision": 0.3179765130984643,
+          "recall": 0.43564356435643564,
+          "f1": 0.36762402088772844,
+          "false_alarms_per_min": 129.0599521409907,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.6714279311043876,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.45540994636968896,
+          "precision": 0.2902912621359223,
+          "recall": 0.37004950495049505,
+          "f1": 0.3253536452665941,
+          "false_alarms_per_min": 124.95738412591284,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.714285033089774,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.48372626054085704,
+          "precision": 0.2755102040816326,
+          "recall": 0.3341584158415842,
+          "f1": 0.3020134228187919,
+          "false_alarms_per_min": 121.36763711271972,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.714285033089774,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.5120425747120252,
+          "precision": 0.27700534759358286,
+          "recall": 0.32054455445544555,
+          "f1": 0.2971887550200803,
+          "false_alarms_per_min": 115.55566575802611,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.714285033089774,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.5403588888831932,
+          "precision": 0.2767857142857143,
+          "recall": 0.3069306930693069,
+          "f1": 0.2910798122065728,
+          "false_alarms_per_min": 110.76933640710195,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.2142836025782993,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.5686752030543613,
+          "precision": 0.2747126436781609,
+          "recall": 0.2957920792079208,
+          "f1": 0.28486293206197855,
+          "false_alarms_per_min": 107.86335072975514,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.2428550039018904,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.5969915172255293,
+          "precision": 0.2746987951807229,
+          "recall": 0.28217821782178215,
+          "f1": 0.2783882783882784,
+          "false_alarms_per_min": 102.9060810448694,
+          "event_recall": 1.0,
+          "mean_delay_s": 3.7999963419778005,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.6253078313966973,
+          "precision": 0.27283950617283953,
+          "recall": 0.27351485148514854,
+          "f1": 0.27317676143386893,
+          "false_alarms_per_min": 100.6838567033689,
+          "event_recall": 1.0,
+          "mean_delay_s": 3.7999963419778005,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.6536241455678654,
+          "precision": 0.27341772151898736,
+          "recall": 0.26732673267326734,
+          "f1": 0.27033792240300375,
+          "false_alarms_per_min": 98.11975169394525,
+          "event_recall": 1.0,
+          "mean_delay_s": 5.399994850158691,
+          "median_delay_s": 0.4999992847442627
+        },
+        {
+          "threshold": 0.6819404597390335,
+          "precision": 0.2734375,
+          "recall": 0.2599009900990099,
+          "f1": 0.26649746192893403,
+          "false_alarms_per_min": 95.38470635056001,
+          "event_recall": 1.0,
+          "mean_delay_s": 5.399994850158691,
+          "median_delay_s": 0.4999992847442627
+        },
+        {
+          "threshold": 0.7102567739102016,
+          "precision": 0.2765957446808511,
+          "recall": 0.25742574257425743,
+          "f1": 0.26666666666666666,
+          "false_alarms_per_min": 92.99154167509793,
+          "event_recall": 1.0,
+          "mean_delay_s": 5.399994850158691,
+          "median_delay_s": 0.4999992847442627
+        },
+        {
+          "threshold": 0.7385730880813697,
+          "precision": 0.27359781121751026,
+          "recall": 0.24752475247524752,
+          "f1": 0.2599090318388564,
+          "false_alarms_per_min": 90.76931733359743,
+          "event_recall": 1.0,
+          "mean_delay_s": 5.399994850158691,
+          "median_delay_s": 0.4999992847442627
+        },
+        {
+          "threshold": 0.7668894022525377,
+          "precision": 0.2759601706970128,
+          "recall": 0.2400990099009901,
+          "f1": 0.256783587028458,
+          "false_alarms_per_min": 87.00862998644273,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.228565522602627,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.7952057164237057,
+          "precision": 0.27246376811594203,
+          "recall": 0.23267326732673269,
+          "f1": 0.25100133511348466,
+          "false_alarms_per_min": 85.8120476487117,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.228565522602627,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.8235220305948738,
+          "precision": 0.2736842105263158,
+          "recall": 0.22524752475247525,
+          "f1": 0.24711473183978275,
+          "false_alarms_per_min": 82.56418130344173,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.242851223264422,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.8518383447660418,
+          "precision": 0.2739938080495356,
+          "recall": 0.21905940594059406,
+          "f1": 0.24346629986244842,
+          "false_alarms_per_min": 80.17101662797965,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.257136923926217,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.8801546589372099,
+          "precision": 0.2761904761904762,
+          "recall": 0.21534653465346534,
+          "f1": 0.2420027816411683,
+          "false_alarms_per_min": 77.94879228647915,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.257136923926217,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.908470973108378,
+          "precision": 0.2784184514003295,
+          "recall": 0.20915841584158415,
+          "f1": 0.23886925795053005,
+          "false_alarms_per_min": 74.87186627517076,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.07142186164856,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 0.9367872872795461,
+          "precision": 0.273972602739726,
+          "recall": 0.19801980198019803,
+          "f1": 0.22988505747126436,
+          "false_alarms_per_min": 72.47870159970869,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.671418394361224,
+          "median_delay_s": 11.899988651275635
+        },
+        {
+          "threshold": 0.9651036014507142,
+          "precision": 0.2824156305506217,
+          "recall": 0.1967821782178218,
+          "f1": 0.23194748358862147,
+          "false_alarms_per_min": 69.05989492047713,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.699989795684814,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 0.9934199156218821,
+          "precision": 0.2851985559566787,
+          "recall": 0.19554455445544555,
+          "f1": 0.23201174743024963,
+          "false_alarms_per_min": 67.69237224878452,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.699989795684814,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.0217362297930503,
+          "precision": 0.28785046728971964,
+          "recall": 0.1905940594059406,
+          "f1": 0.22933730454207002,
+          "false_alarms_per_min": 65.12826723936087,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.699989795684814,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.0500525439642183,
+          "precision": 0.2926356589147287,
+          "recall": 0.18688118811881188,
+          "f1": 0.2280966767371601,
+          "false_alarms_per_min": 62.393221895975636,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.699989795684814,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.0783688581353863,
+          "precision": 0.2984189723320158,
+          "recall": 0.18688118811881188,
+          "f1": 0.2298325722983257,
+          "false_alarms_per_min": 60.68381855635986,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.699989795684814,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.1066851723065545,
+          "precision": 0.30612244897959184,
+          "recall": 0.18564356435643564,
+          "f1": 0.23112480739599384,
+          "false_alarms_per_min": 58.119713546936204,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.699989795684814,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.1350014864777225,
+          "precision": 0.31185031185031187,
+          "recall": 0.18564356435643564,
+          "f1": 0.23273855702094648,
+          "false_alarms_per_min": 56.58125054128201,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.699989795684814,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.1633178006488905,
+          "precision": 0.3174946004319654,
+          "recall": 0.18193069306930693,
+          "f1": 0.23131392604248624,
+          "false_alarms_per_min": 54.017145531858354,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.757132598331996,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.1916341148200587,
+          "precision": 0.3288590604026846,
+          "recall": 0.18193069306930693,
+          "f1": 0.23426294820717133,
+          "false_alarms_per_min": 51.28210018847312,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.757132598331996,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.2199504289912266,
+          "precision": 0.3294930875576037,
+          "recall": 0.17698019801980197,
+          "f1": 0.23027375201288244,
+          "false_alarms_per_min": 49.74363718281893,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.242845467158727,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.2482667431623946,
+          "precision": 0.3317757009345794,
+          "recall": 0.17574257425742573,
+          "f1": 0.2297734627831715,
+          "false_alarms_per_min": 48.88893551301104,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.242845467158727,
+          "median_delay_s": 11.999988555908203
+        },
+        {
+          "threshold": 1.2765830573335628,
+          "precision": 0.3381294964028777,
+          "recall": 0.1745049504950495,
+          "f1": 0.23020408163265307,
+          "false_alarms_per_min": 47.17953217339527,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.271416868482317,
+          "median_delay_s": 12.099988460540771
+        },
+        {
+          "threshold": 1.3048993715047308,
+          "precision": 0.340632603406326,
+          "recall": 0.17326732673267325,
+          "f1": 0.22969647251845773,
+          "false_alarms_per_min": 46.324830503587386,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.271416868482317,
+          "median_delay_s": 12.099988460540771
+        },
+        {
+          "threshold": 1.333215685675899,
+          "precision": 0.33910891089108913,
+          "recall": 0.16955445544554457,
+          "f1": 0.22607260726072612,
+          "false_alarms_per_min": 45.64106916774108,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.271416868482317,
+          "median_delay_s": 12.099988460540771
+        },
+        {
+          "threshold": 1.361531999847067,
+          "precision": 0.3425,
+          "recall": 0.16955445544554457,
+          "f1": 0.22682119205298015,
+          "false_alarms_per_min": 44.957307831894774,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.271416868482317,
+          "median_delay_s": 12.099988460540771
+        },
+        {
+          "threshold": 1.389848314018235,
+          "precision": 0.3488372093023256,
+          "recall": 0.1670792079207921,
+          "f1": 0.2259414225941423,
+          "false_alarms_per_min": 43.07696415831742,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.285702569144112,
+          "median_delay_s": 12.099988460540771
+        },
+        {
+          "threshold": 1.4181646281894031,
+          "precision": 0.3537234042553192,
+          "recall": 0.1646039603960396,
+          "f1": 0.2246621621621622,
+          "false_alarms_per_min": 41.53850115266323,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.299988269805908,
+          "median_delay_s": 12.099988460540771
+        },
+        {
+          "threshold": 1.4464809423605711,
+          "precision": 0.3567567567567568,
+          "recall": 0.16336633663366337,
+          "f1": 0.22410865874363325,
+          "false_alarms_per_min": 40.68379948285534,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.299988269805908,
+          "median_delay_s": 12.099988460540771
+        },
+        {
+          "threshold": 1.4747972565317393,
+          "precision": 0.3626373626373626,
+          "recall": 0.16336633663366337,
+          "f1": 0.22525597269624573,
+          "false_alarms_per_min": 39.65815747908588,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.328559671129499,
+          "median_delay_s": 12.19998836517334
+        },
+        {
+          "threshold": 1.5031135707029073,
+          "precision": 0.3654390934844193,
+          "recall": 0.15965346534653466,
+          "f1": 0.22222222222222224,
+          "false_alarms_per_min": 38.29063480739327,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.328559671129499,
+          "median_delay_s": 12.19998836517334
+        },
+        {
+          "threshold": 1.5314298848740753,
+          "precision": 0.367816091954023,
+          "recall": 0.15841584158415842,
+          "f1": 0.22145328719723184,
+          "false_alarms_per_min": 37.606873471546955,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.35713107245309,
+          "median_delay_s": 12.299988269805908
+        },
+        {
+          "threshold": 1.5597461990452435,
+          "precision": 0.37168141592920356,
+          "recall": 0.15594059405940594,
+          "f1": 0.2197035745422842,
+          "false_alarms_per_min": 36.41029113381592,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.271414961133685,
+          "median_delay_s": 13.199987173080444
+        },
+        {
+          "threshold": 1.5880625132164115,
+          "precision": 0.36555891238670696,
+          "recall": 0.14975247524752475,
+          "f1": 0.21246707638279191,
+          "false_alarms_per_min": 35.897470131931186,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.28570066179548,
+          "median_delay_s": 13.199987173080444
+        },
+        {
+          "threshold": 1.6163788273875794,
+          "precision": 0.3653250773993808,
+          "recall": 0.14603960396039603,
+          "f1": 0.2086648983200707,
+          "false_alarms_per_min": 35.0427684621233,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.299986362457275,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.6446951415587476,
+          "precision": 0.3659305993690852,
+          "recall": 0.14356435643564355,
+          "f1": 0.20622222222222222,
+          "false_alarms_per_min": 34.35900712627699,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.299986362457275,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.6730114557299156,
+          "precision": 0.3729903536977492,
+          "recall": 0.14356435643564355,
+          "f1": 0.2073279714030384,
+          "false_alarms_per_min": 33.33336512250753,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.299986362457275,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.7013277699010836,
+          "precision": 0.375,
+          "recall": 0.14108910891089108,
+          "f1": 0.20503597122302156,
+          "false_alarms_per_min": 32.47866345269964,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.299986362457275,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.7296440840722518,
+          "precision": 0.3822525597269625,
+          "recall": 0.13861386138613863,
+          "f1": 0.20345140781108087,
+          "false_alarms_per_min": 30.940200447045452,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.328557763780866,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.7579603982434198,
+          "precision": 0.3888888888888889,
+          "recall": 0.13861386138613863,
+          "f1": 0.20437956204379562,
+          "false_alarms_per_min": 30.085498777237564,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.328557763780866,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.786276712414588,
+          "precision": 0.3881118881118881,
+          "recall": 0.1373762376237624,
+          "f1": 0.20292504570383915,
+          "false_alarms_per_min": 29.91455844327599,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.328557763780866,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.814593026585756,
+          "precision": 0.3900709219858156,
+          "recall": 0.13613861386138615,
+          "f1": 0.2018348623853211,
+          "false_alarms_per_min": 29.40173744139126,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.342843430382866,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.842909340756924,
+          "precision": 0.3906810035842294,
+          "recall": 0.1349009900990099,
+          "f1": 0.2005519779208832,
+          "false_alarms_per_min": 29.059856773468102,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.342843430382866,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 1.8712256549280921,
+          "precision": 0.3940520446096654,
+          "recall": 0.1311881188118812,
+          "f1": 0.1968430826369545,
+          "false_alarms_per_min": 27.863274435737065,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.35712913104466,
+          "median_delay_s": 13.399986982345581
+        },
+        {
+          "threshold": 1.89954196909926,
+          "precision": 0.3940520446096654,
+          "recall": 0.1311881188118812,
+          "f1": 0.1968430826369545,
+          "false_alarms_per_min": 27.863274435737065,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.35712913104466,
+          "median_delay_s": 13.399986982345581
+        },
+        {
+          "threshold": 1.9278582832704283,
+          "precision": 0.3939393939393939,
+          "recall": 0.12871287128712872,
+          "f1": 0.19402985074626866,
+          "false_alarms_per_min": 27.350453433852334,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.671414545604161,
+          "median_delay_s": 13.399986982345581
+        },
+        {
+          "threshold": 1.9561745974415963,
+          "precision": 0.39453125,
+          "recall": 0.125,
+          "f1": 0.18984962406015038,
+          "false_alarms_per_min": 26.495751764044446,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.72855738231114,
+          "median_delay_s": 13.399986982345581
+        },
+        {
+          "threshold": 1.9844909116127643,
+          "precision": 0.38589211618257263,
+          "recall": 0.1150990099009901,
+          "f1": 0.1773117254528122,
+          "false_alarms_per_min": 25.29916942631341,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.785700184958321,
+          "median_delay_s": 13.399986982345581
+        },
+        {
+          "threshold": 2.012807225783932,
+          "precision": 0.3776824034334764,
+          "recall": 0.10891089108910891,
+          "f1": 0.16906820365033623,
+          "false_alarms_per_min": 24.786348424428677,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.785700184958321,
+          "median_delay_s": 13.399986982345581
+        },
+        {
+          "threshold": 2.0411235399551004,
+          "precision": 0.3744493392070485,
+          "recall": 0.1051980198019802,
+          "f1": 0.1642512077294686,
+          "false_alarms_per_min": 24.273527422543946,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.828557252883911,
+          "median_delay_s": 13.49998688697815
+        },
+        {
+          "threshold": 2.0694398541262684,
+          "precision": 0.3474178403755869,
+          "recall": 0.09158415841584158,
+          "f1": 0.14495592556317338,
+          "false_alarms_per_min": 23.760706420659215,
+          "event_recall": 1.0,
+          "mean_delay_s": 14.842842919485909,
+          "median_delay_s": 13.49998688697815
+        },
+        {
+          "threshold": 2.0977561682974364,
+          "precision": 0.34615384615384615,
+          "recall": 0.0891089108910891,
+          "f1": 0.14173228346456693,
+          "false_alarms_per_min": 23.247885418774484,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.014271293367658,
+          "median_delay_s": 13.49998688697815
+        },
+        {
+          "threshold": 2.1260724824686044,
+          "precision": 0.3399014778325123,
+          "recall": 0.0853960396039604,
+          "f1": 0.13649851632047477,
+          "false_alarms_per_min": 22.906004750851327,
+          "event_recall": 1.0,
+          "mean_delay_s": 18.428553785596574,
+          "median_delay_s": 13.49998688697815
+        },
+        {
+          "threshold": 2.1543887966397723,
+          "precision": 0.3333333333333333,
+          "recall": 0.08044554455445545,
+          "f1": 0.1296111665004985,
+          "false_alarms_per_min": 22.22224341500502,
+          "event_recall": 1.0,
+          "mean_delay_s": 24.371405294963292,
+          "median_delay_s": 26.79997444152832
+        },
+        {
+          "threshold": 2.1827051108109403,
+          "precision": 0.3298429319371728,
+          "recall": 0.07797029702970297,
+          "f1": 0.12612612612612614,
+          "false_alarms_per_min": 21.880362747081865,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.583307941754658,
+          "median_delay_s": 28.799972534179688
+        },
+        {
+          "threshold": 2.2110214249821087,
+          "precision": 0.3172043010752688,
+          "recall": 0.07301980198019802,
+          "f1": 0.1187122736418511,
+          "false_alarms_per_min": 21.70942241312029,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.599974592526753,
+          "median_delay_s": 28.799972534179688
+        },
+        {
+          "threshold": 2.2393377391532767,
+          "precision": 0.32065217391304346,
+          "recall": 0.07301980198019802,
+          "f1": 0.1189516129032258,
+          "false_alarms_per_min": 21.367541745197133,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.599974592526753,
+          "median_delay_s": 28.799972534179688
+        },
+        {
+          "threshold": 2.2676540533244447,
+          "precision": 0.3089887640449438,
+          "recall": 0.06806930693069307,
+          "f1": 0.11156186612576066,
+          "false_alarms_per_min": 21.02566107727398,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.599974592526753,
+          "median_delay_s": 28.799972534179688
+        },
+        {
+          "threshold": 2.2959703674956127,
+          "precision": 0.30857142857142855,
+          "recall": 0.06683168316831684,
+          "f1": 0.1098677517802645,
+          "false_alarms_per_min": 20.683780409350828,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.599974592526753,
+          "median_delay_s": 28.799972534179688
+        },
+        {
+          "threshold": 2.3242866816667807,
+          "precision": 0.3023255813953488,
+          "recall": 0.06435643564356436,
+          "f1": 0.10612244897959183,
+          "false_alarms_per_min": 20.51284007538925,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.616641243298847,
+          "median_delay_s": 28.799972534179688
+        },
+        {
+          "threshold": 2.352602995837949,
+          "precision": 0.30177514792899407,
+          "recall": 0.06311881188118812,
+          "f1": 0.10440122824974411,
+          "false_alarms_per_min": 20.170959407466096,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.616641243298847,
+          "median_delay_s": 28.799972534179688
+        },
+        {
+          "threshold": 2.380919310009117,
+          "precision": 0.30538922155688625,
+          "recall": 0.06311881188118812,
+          "f1": 0.10461538461538461,
+          "false_alarms_per_min": 19.82907873954294,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.633307894070942,
+          "median_delay_s": 28.84997248649597
+        },
+        {
+          "threshold": 2.409235624180285,
+          "precision": 0.3,
+          "recall": 0.0594059405940594,
+          "f1": 0.09917355371900825,
+          "false_alarms_per_min": 19.145317403696634,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.633307894070942,
+          "median_delay_s": 28.84997248649597
+        },
+        {
+          "threshold": 2.437551938351453,
+          "precision": 0.2857142857142857,
+          "recall": 0.054455445544554455,
+          "f1": 0.09147609147609148,
+          "false_alarms_per_min": 18.803436735773477,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.66664119561513,
+          "median_delay_s": 28.84997248649597
+        },
+        {
+          "threshold": 2.465868252522621,
+          "precision": 0.27631578947368424,
+          "recall": 0.05198019801980198,
+          "f1": 0.08750000000000001,
+          "false_alarms_per_min": 18.803436735773477,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.66664119561513,
+          "median_delay_s": 28.84997248649597
+        },
+        {
+          "threshold": 2.494184566693789,
+          "precision": 0.2653061224489796,
+          "recall": 0.04826732673267327,
+          "f1": 0.08167539267015708,
+          "false_alarms_per_min": 18.461556067850324,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.66664119561513,
+          "median_delay_s": 28.84997248649597
+        },
+        {
+          "threshold": 2.5225008808649574,
+          "precision": 0.2569444444444444,
+          "recall": 0.04579207920792079,
+          "f1": 0.07773109243697479,
+          "false_alarms_per_min": 18.290615733888746,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.69997449715932,
+          "median_delay_s": 28.84997248649597
+        },
+        {
+          "threshold": 2.5508171950361254,
+          "precision": 0.2517482517482518,
+          "recall": 0.04455445544554455,
+          "f1": 0.07570977917981073,
+          "false_alarms_per_min": 18.290615733888746,
+          "event_recall": 0.8571428571428571,
+          "mean_delay_s": 26.69997449715932,
+          "median_delay_s": 28.84997248649597
+        },
+        {
+          "threshold": 2.5791335092072933,
+          "precision": 0.24822695035460993,
+          "recall": 0.043316831683168314,
+          "f1": 0.0737618545837724,
+          "false_alarms_per_min": 18.11967539992717,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.659974527359008,
+          "median_delay_s": 30.799970626831055
+        },
+        {
+          "threshold": 2.6074498233784613,
+          "precision": 0.2463768115942029,
+          "recall": 0.04207920792079208,
+          "f1": 0.07188160676532769,
+          "false_alarms_per_min": 17.777794732004015,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.659974527359008,
+          "median_delay_s": 30.799970626831055
+        },
+        {
+          "threshold": 2.6357661375496293,
+          "precision": 0.23703703703703705,
+          "recall": 0.039603960396039604,
+          "f1": 0.06786850477200425,
+          "false_alarms_per_min": 17.60685439804244,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.71997447013855,
+          "median_delay_s": 30.899970531463623
+        },
+        {
+          "threshold": 2.6640824517207977,
+          "precision": 0.23484848484848486,
+          "recall": 0.038366336633663366,
+          "f1": 0.06595744680851065,
+          "false_alarms_per_min": 17.264973730119284,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.799974393844604,
+          "median_delay_s": 30.899970531463623
+        },
+        {
+          "threshold": 2.6923987658919657,
+          "precision": 0.23484848484848486,
+          "recall": 0.038366336633663366,
+          "f1": 0.06595744680851065,
+          "false_alarms_per_min": 17.264973730119284,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.799974393844604,
+          "median_delay_s": 30.899970531463623
+        },
+        {
+          "threshold": 2.7207150800631337,
+          "precision": 0.2366412213740458,
+          "recall": 0.038366336633663366,
+          "f1": 0.06602768903088393,
+          "false_alarms_per_min": 17.09403339615771,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.799974393844604,
+          "median_delay_s": 30.899970531463623
+        },
+        {
+          "threshold": 2.7490313942343017,
+          "precision": 0.24031007751937986,
+          "recall": 0.038366336633663366,
+          "f1": 0.06616862326574173,
+          "false_alarms_per_min": 16.752152728234552,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.799974393844604,
+          "median_delay_s": 30.899970531463623
+        },
+        {
+          "threshold": 2.7773477084054696,
+          "precision": 0.24603174603174602,
+          "recall": 0.038366336633663366,
+          "f1": 0.06638115631691649,
+          "false_alarms_per_min": 16.23933172634982,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 26.799974393844604,
+          "median_delay_s": 30.899970531463623
+        },
+        {
+          "threshold": 2.805664022576638,
+          "precision": 0.2459016393442623,
+          "recall": 0.03712871287128713,
+          "f1": 0.06451612903225806,
+          "false_alarms_per_min": 15.726510724465092,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 2.833980336747806,
+          "precision": 0.24793388429752067,
+          "recall": 0.03712871287128713,
+          "f1": 0.06458557588805167,
+          "false_alarms_per_min": 15.555570390503513,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 2.862296650918974,
+          "precision": 0.25210084033613445,
+          "recall": 0.03712871287128713,
+          "f1": 0.06472491909385113,
+          "false_alarms_per_min": 15.21368972258036,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 2.890612965090142,
+          "precision": 0.25210084033613445,
+          "recall": 0.03712871287128713,
+          "f1": 0.06472491909385113,
+          "false_alarms_per_min": 15.21368972258036,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 2.91892927926131,
+          "precision": 0.25862068965517243,
+          "recall": 0.03712871287128713,
+          "f1": 0.06493506493506494,
+          "false_alarms_per_min": 14.70086872069563,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 2.9472455934324784,
+          "precision": 0.26548672566371684,
+          "recall": 0.03712871287128713,
+          "f1": 0.06514657980456026,
+          "false_alarms_per_min": 14.188047718810898,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 2.9755619076036464,
+          "precision": 0.2702702702702703,
+          "recall": 0.03712871287128713,
+          "f1": 0.06528835690968444,
+          "false_alarms_per_min": 13.846167050887743,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 3.0038782217748143,
+          "precision": 0.27522935779816515,
+          "recall": 0.03712871287128713,
+          "f1": 0.06543075245365322,
+          "false_alarms_per_min": 13.504286382964588,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 3.0321945359459823,
+          "precision": 0.2524271844660194,
+          "recall": 0.03217821782178218,
+          "f1": 0.057080131723380896,
+          "false_alarms_per_min": 13.162405715041436,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 3.0605108501171503,
+          "precision": 0.24509803921568626,
+          "recall": 0.03094059405940594,
+          "f1": 0.054945054945054944,
+          "false_alarms_per_min": 13.162405715041436,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.474969923496246,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 3.0888271642883183,
+          "precision": 0.22340425531914893,
+          "recall": 0.02599009900990099,
+          "f1": 0.04656319290465632,
+          "false_alarms_per_min": 12.478644379195126,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.52496987581253,
+          "median_delay_s": 34.89996671676636
+        },
+        {
+          "threshold": 3.1171434784594867,
+          "precision": 0.2111111111111111,
+          "recall": 0.023514851485148515,
+          "f1": 0.042316258351893093,
+          "false_alarms_per_min": 12.136763711271973,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.59996998310089,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.1454597926306547,
+          "precision": 0.17647058823529413,
+          "recall": 0.018564356435643563,
+          "f1": 0.0335946248600224,
+          "false_alarms_per_min": 11.965823377310395,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.624969959259033,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.1737761068018226,
+          "precision": 0.1518987341772152,
+          "recall": 0.01485148514851485,
+          "f1": 0.02705749718151071,
+          "false_alarms_per_min": 11.453002375425664,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.624969959259033,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.2020924209729906,
+          "precision": 0.12,
+          "recall": 0.011138613861386138,
+          "f1": 0.020385050962627403,
+          "false_alarms_per_min": 11.282062041464087,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.649969935417175,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.2304087351441586,
+          "precision": 0.13043478260869565,
+          "recall": 0.011138613861386138,
+          "f1": 0.020524515393386542,
+          "false_alarms_per_min": 10.256420037694625,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.649969935417175,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.258725049315327,
+          "precision": 0.125,
+          "recall": 0.009900990099009901,
+          "f1": 0.018348623853211007,
+          "false_alarms_per_min": 9.572658701848317,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.649969935417175,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.287041363486495,
+          "precision": 0.10344827586206896,
+          "recall": 0.007425742574257425,
+          "f1": 0.013856812933025403,
+          "false_alarms_per_min": 8.888897366002007,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.649969935417175,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.315357677657663,
+          "precision": 0.02040816326530612,
+          "recall": 0.0012376237623762376,
+          "f1": 0.002333722287047841,
+          "false_alarms_per_min": 8.2051360301557,
+          "event_recall": 0.5714285714285714,
+          "mean_delay_s": 31.649969935417175,
+          "median_delay_s": 34.999966859817505
+        },
+        {
+          "threshold": 3.343673991828831,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_min": 7.6923150282709685,
+          "event_recall": 0.42857142857142855,
+          "mean_delay_s": 37.366631269454956,
+          "median_delay_s": 38.99996304512024
+        },
+        {
+          "threshold": 3.371990305999999,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_min": 7.521374694309391,
+          "event_recall": 0.42857142857142855,
+          "mean_delay_s": 37.366631269454956,
+          "median_delay_s": 38.99996304512024
+        }
+      ]
+    },
+    "svm": {
+      "best_f1_operating_point": {
+        "threshold": -0.8314161040336119,
+        "precision": 0.2855335301560523,
+        "recall": 0.8378712871287128,
+        "f1": 0.4259201006605851,
+        "false_alarms_per_min": 289.57292573091155,
+        "event_recall": 1.0,
+        "mean_delay_s": 0.0,
+        "median_delay_s": 0.0
+      },
+      "curve": [
+        {
+          "threshold": -7.022313619999999,
+          "precision": 0.18905007019185774,
+          "recall": 1.0,
+          "f1": 0.3179850452577725,
+          "false_alarms_per_min": 592.4791975108261,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -6.867541182100839,
+          "precision": 0.18936020623388797,
+          "recall": 1.0,
+          "f1": 0.318423645320197,
+          "false_alarms_per_min": 591.2826151730951,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -6.71276874420168,
+          "precision": 0.18998354102986129,
+          "recall": 1.0,
+          "f1": 0.319304485279589,
+          "false_alarms_per_min": 588.889450497633,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -6.55799630630252,
+          "precision": 0.19052110351332233,
+          "recall": 1.0,
+          "f1": 0.3200633788869083,
+          "false_alarms_per_min": 586.8381664900941,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -6.40322386840336,
+          "precision": 0.1907459867799811,
+          "recall": 1.0,
+          "f1": 0.3203806502775575,
+          "false_alarms_per_min": 585.9834648202863,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -6.2484514305042005,
+          "precision": 0.1910617167179002,
+          "recall": 1.0,
+          "f1": 0.32082588842565013,
+          "false_alarms_per_min": 584.7868824825551,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -6.093678992605041,
+          "precision": 0.19165085388994307,
+          "recall": 1.0,
+          "f1": 0.321656050955414,
+          "false_alarms_per_min": 582.5646581410547,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -5.9389065547058815,
+          "precision": 0.19228938600666348,
+          "recall": 1.0,
+          "f1": 0.32255489021956085,
+          "false_alarms_per_min": 580.1714934655926,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -5.784134116806722,
+          "precision": 0.1929321872015282,
+          "recall": 1.0,
+          "f1": 0.3234587670136109,
+          "false_alarms_per_min": 577.7783287901306,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -5.6293616789075624,
+          "precision": 0.19357930043124102,
+          "recall": 1.0,
+          "f1": 0.32436772380570056,
+          "false_alarms_per_min": 575.3851641146684,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -5.4745892410084025,
+          "precision": 0.19446450060168471,
+          "recall": 1.0,
+          "f1": 0.3256095103767882,
+          "false_alarms_per_min": 572.1372977693985,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -5.3198168031092425,
+          "precision": 0.19521623580575018,
+          "recall": 1.0,
+          "f1": 0.32666262381241157,
+          "false_alarms_per_min": 569.4022524260132,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -5.1650443652100835,
+          "precision": 0.19625941219334467,
+          "recall": 1.0,
+          "f1": 0.32812182741116747,
+          "false_alarms_per_min": 565.6415650788585,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -5.0102719273109235,
+          "precision": 0.1973137973137973,
+          "recall": 1.0,
+          "f1": 0.3295941260452784,
+          "false_alarms_per_min": 561.8808777317039,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -4.8554994894117645,
+          "precision": 0.198769987699877,
+          "recall": 1.0,
+          "f1": 0.33162323004309463,
+          "false_alarms_per_min": 556.7526677128566,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -4.7007270515126045,
+          "precision": 0.19970341077607515,
+          "recall": 1.0,
+          "f1": 0.3329213020189535,
+          "false_alarms_per_min": 553.5048013675865,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -4.5459546136134446,
+          "precision": 0.2009950248756219,
+          "recall": 1.0,
+          "f1": 0.3347141673570837,
+          "false_alarms_per_min": 549.0603526845856,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -4.391182175714285,
+          "precision": 0.2025062656641604,
+          "recall": 1.0,
+          "f1": 0.33680700291788246,
+          "false_alarms_per_min": 543.9321426657383,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -4.236409737815125,
+          "precision": 0.2038859449911683,
+          "recall": 1.0,
+          "f1": 0.3387130580591071,
+          "false_alarms_per_min": 539.3167536487757,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -4.081637299915966,
+          "precision": 0.20528455284552846,
+          "recall": 1.0,
+          "f1": 0.3406408094435076,
+          "false_alarms_per_min": 534.7013646318131,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -3.9268648620168056,
+          "precision": 0.20691421254801537,
+          "recall": 1.0,
+          "f1": 0.34288139189475914,
+          "false_alarms_per_min": 529.4022142790042,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -3.772092424117646,
+          "precision": 0.20883949340914965,
+          "recall": 1.0,
+          "f1": 0.3455206328843275,
+          "false_alarms_per_min": 523.2483622563874,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -3.6173199862184866,
+          "precision": 0.21091098929783347,
+          "recall": 1.0,
+          "f1": 0.34835093770209097,
+          "false_alarms_per_min": 516.7526295658475,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -3.4625475483193267,
+          "precision": 0.21477937267410951,
+          "recall": 1.0,
+          "f1": 0.3536105032822757,
+          "false_alarms_per_min": 504.95774652249867,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -3.307775110420167,
+          "precision": 0.21992378878606422,
+          "recall": 1.0,
+          "f1": 0.3605533244087461,
+          "false_alarms_per_min": 489.9149971338799,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -3.1530026725210076,
+          "precision": 0.22557230597431602,
+          "recall": 1.0,
+          "f1": 0.3681093394077449,
+          "false_alarms_per_min": 474.1884864094148,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -2.9982302346218477,
+          "precision": 0.23180903077365544,
+          "recall": 0.9975247524752475,
+          "f1": 0.376196032672112,
+          "false_alarms_per_min": 456.5816320113724,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -2.8434577967226877,
+          "precision": 0.23909819044793829,
+          "recall": 0.9975247524752475,
+          "f1": 0.3857382148839435,
+          "false_alarms_per_min": 438.4619566114452,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -2.6886853588235287,
+          "precision": 0.24468085106382978,
+          "recall": 0.9962871287128713,
+          "f1": 0.3928745729624207,
+          "false_alarms_per_min": 424.78672989451906,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -2.5339129209243687,
+          "precision": 0.24875776397515528,
+          "recall": 0.9913366336633663,
+          "f1": 0.39771598808341607,
+          "false_alarms_per_min": 413.50466785305497,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -2.3791404830252088,
+          "precision": 0.253740846864056,
+          "recall": 0.9863861386138614,
+          "f1": 0.403646492782983,
+          "false_alarms_per_min": 400.6841428059367,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -2.2243680451260497,
+          "precision": 0.2584856396866841,
+          "recall": 0.9801980198019802,
+          "f1": 0.4090909090909091,
+          "false_alarms_per_min": 388.37643876070314,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -2.0695956072268897,
+          "precision": 0.2644489247311828,
+          "recall": 0.974009900990099,
+          "f1": 0.4159619450317125,
+          "false_alarms_per_min": 374.1883910418922,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -1.9148231693277298,
+          "precision": 0.269682320441989,
+          "recall": 0.9665841584158416,
+          "f1": 0.4217062634989201,
+          "false_alarms_per_min": 361.5388063287355,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -1.7600507314285707,
+          "precision": 0.27078891257995735,
+          "recall": 0.943069306930693,
+          "f1": 0.42076200993926005,
+          "false_alarms_per_min": 350.76956528915616,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -1.6052782935294108,
+          "precision": 0.2721287490855889,
+          "recall": 0.9207920792079208,
+          "f1": 0.4201016374929418,
+          "false_alarms_per_min": 340.1712645835384,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -1.4505058556302508,
+          "precision": 0.2763800225309801,
+          "recall": 0.9108910891089109,
+          "f1": 0.4240852780178622,
+          "false_alarms_per_min": 329.40202354395905,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -1.2957334177310917,
+          "precision": 0.27784245246410555,
+          "recall": 0.8861386138613861,
+          "f1": 0.42304283604135895,
+          "false_alarms_per_min": 318.11996150249496,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -1.1409609798319318,
+          "precision": 0.27936507936507937,
+          "recall": 0.8712871287128713,
+          "f1": 0.4230769230769231,
+          "false_alarms_per_min": 310.427646474224,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -0.9861885419327718,
+          "precision": 0.2821559820334831,
+          "recall": 0.8551980198019802,
+          "f1": 0.4243168560024563,
+          "false_alarms_per_min": 300.5131071044525,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -0.8314161040336119,
+          "precision": 0.2855335301560523,
+          "recall": 0.8378712871287128,
+          "f1": 0.4259201006605851,
+          "false_alarms_per_min": 289.57292573091155,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -0.6766436661344528,
+          "precision": 0.28719723183391005,
+          "recall": 0.8217821782178217,
+          "f1": 0.4256410256410256,
+          "false_alarms_per_min": 281.70967036867904,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -0.5218712282352929,
+          "precision": 0.2859054415700268,
+          "recall": 0.7933168316831684,
+          "f1": 0.42032786885245904,
+          "false_alarms_per_min": 273.6754746724849,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -0.3670987903361329,
+          "precision": 0.2876269621421976,
+          "recall": 0.7710396039603961,
+          "f1": 0.4189643577673168,
+          "false_alarms_per_min": 263.76093530271345,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -0.21232635243697384,
+          "precision": 0.2881679389312977,
+          "recall": 0.7475247524752475,
+          "f1": 0.4159779614325069,
+          "false_alarms_per_min": 255.042978270673,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": -0.05755391453781389,
+          "precision": 0.2887909936368086,
+          "recall": 0.7301980198019802,
+          "f1": 0.4138898632058927,
+          "false_alarms_per_min": 248.37630524617148,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.09721852336134607,
+          "precision": 0.2940267765190525,
+          "recall": 0.7066831683168316,
+          "f1": 0.4152727272727272,
+          "false_alarms_per_min": 234.35919786132217,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.25199096126050513,
+          "precision": 0.29527349973446626,
+          "recall": 0.6881188118811881,
+          "f1": 0.41322928279450016,
+          "false_alarms_per_min": 226.83782316701277,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.4067633991596651,
+          "precision": 0.29069134458356016,
+          "recall": 0.6608910891089109,
+          "f1": 0.403780718336484,
+          "false_alarms_per_min": 222.73525515193492,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.561535837058825,
+          "precision": 0.2890625,
+          "recall": 0.6410891089108911,
+          "f1": 0.3984615384615384,
+          "false_alarms_per_min": 217.7779854670492,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.7163082749579841,
+          "precision": 0.2900631820792648,
+          "recall": 0.625,
+          "f1": 0.3962338171832091,
+          "false_alarms_per_min": 211.28225277650927,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 0.8710807128571441,
+          "precision": 0.28958210712183635,
+          "recall": 0.6089108910891089,
+          "f1": 0.39250099720781806,
+          "false_alarms_per_min": 206.32498309162352,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 1.025853150756304,
+          "precision": 0.28043609933373714,
+          "recall": 0.573019801980198,
+          "f1": 0.3765758438389589,
+          "false_alarms_per_min": 203.07711674635357,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 1.180625588655464,
+          "precision": 0.27464352138871667,
+          "recall": 0.5482673267326733,
+          "f1": 0.3659644774886411,
+          "false_alarms_per_min": 200.00019073504518,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 1.335398026554624,
+          "precision": 0.2715736040609137,
+          "recall": 0.5297029702970297,
+          "f1": 0.35906040268456374,
+          "false_alarms_per_min": 196.2395033878905,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 1.490170464453782,
+          "precision": 0.26739690721649484,
+          "recall": 0.5136138613861386,
+          "f1": 0.35169491525423724,
+          "false_alarms_per_min": 194.35915971431314,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 1.644942902352942,
+          "precision": 0.26570680628272253,
+          "recall": 0.5024752475247525,
+          "f1": 0.34760273972602734,
+          "false_alarms_per_min": 191.79505470488948,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 1.799715340252102,
+          "precision": 0.26063829787234044,
+          "recall": 0.48514851485148514,
+          "f1": 0.3391003460207613,
+          "false_alarms_per_min": 190.08565136527372,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 1.954487778151262,
+          "precision": 0.25675675675675674,
+          "recall": 0.47029702970297027,
+          "f1": 0.33216783216783213,
+          "false_alarms_per_min": 188.0343673577348,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 2.109260216050422,
+          "precision": 0.25700615174299385,
+          "recall": 0.46534653465346537,
+          "f1": 0.33113166006164685,
+          "false_alarms_per_min": 185.81214301623427,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.0,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 2.264032653949582,
+          "precision": 0.2578397212543554,
+          "recall": 0.45792079207920794,
+          "f1": 0.32991529201961656,
+          "false_alarms_per_min": 182.0514556690796,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.014285666601998466,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 2.41880509184874,
+          "precision": 0.2579505300353357,
+          "recall": 0.45173267326732675,
+          "f1": 0.3283850652271705,
+          "false_alarms_per_min": 179.48735065965593,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.014285666601998466,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 2.5735775297479,
+          "precision": 0.2583212735166425,
+          "recall": 0.44183168316831684,
+          "f1": 0.32602739726027397,
+          "false_alarms_per_min": 175.2138423106165,
+          "event_recall": 1.0,
+          "mean_delay_s": 0.8571420056479317,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 2.72834996764706,
+          "precision": 0.2579218865143699,
+          "recall": 0.43316831683168316,
+          "f1": 0.3233256351039261,
+          "false_alarms_per_min": 172.13691629930813,
+          "event_recall": 1.0,
+          "mean_delay_s": 1.9999980926513672,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 2.88312240554622,
+          "precision": 0.2591760299625468,
+          "recall": 0.4282178217821782,
+          "f1": 0.322911805879608,
+          "false_alarms_per_min": 169.05999028799974,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.7857116631099155,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 3.03789484344538,
+          "precision": 0.2606707317073171,
+          "recall": 0.42326732673267325,
+          "f1": 0.32264150943396225,
+          "false_alarms_per_min": 165.81212394272976,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.7857116631099155,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 3.19266728134454,
+          "precision": 0.2629945694336695,
+          "recall": 0.41955445544554454,
+          "f1": 0.3233190271816881,
+          "false_alarms_per_min": 162.39331726349823,
+          "event_recall": 1.0,
+          "mean_delay_s": 2.7857116631099155,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 3.3474397192436998,
+          "precision": 0.2637795275590551,
+          "recall": 0.4146039603960396,
+          "f1": 0.32242540904716066,
+          "false_alarms_per_min": 159.82921225407458,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.185710259846279,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 3.502212157142858,
+          "precision": 0.2592295345104334,
+          "recall": 0.3997524752475248,
+          "f1": 0.31450827653359303,
+          "false_alarms_per_min": 157.77792824653565,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.8571382250104636,
+          "median_delay_s": 0.0
+        },
+        {
+          "threshold": 3.656984595042018,
+          "precision": 0.2565789473684211,
+          "recall": 0.38613861386138615,
+          "f1": 0.308300395256917,
+          "false_alarms_per_min": 154.53006190126567,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.885709626334054,
+          "median_delay_s": 0.19999980926513672
+        },
+        {
+          "threshold": 3.811757032941178,
+          "precision": 0.25591216216216217,
+          "recall": 0.375,
+          "f1": 0.3042168674698795,
+          "false_alarms_per_min": 150.59843422014941,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.885709626334054,
+          "median_delay_s": 0.19999980926513672
+        },
+        {
+          "threshold": 3.966529470840338,
+          "precision": 0.2513134851138354,
+          "recall": 0.3551980198019802,
+          "f1": 0.29435897435897435,
+          "false_alarms_per_min": 146.1539855371484,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.89999532699585,
+          "median_delay_s": 0.19999980926513672
+        },
+        {
+          "threshold": 4.121301908739498,
+          "precision": 0.2497721057429353,
+          "recall": 0.33910891089108913,
+          "f1": 0.2876640419947507,
+          "false_alarms_per_min": 140.68389485037792,
+          "event_recall": 1.0,
+          "mean_delay_s": 4.92856672831944,
+          "median_delay_s": 0.2999997138977051
+        },
+        {
+          "threshold": 4.276074346638658,
+          "precision": 0.2469368520263902,
+          "recall": 0.32425742574257427,
+          "f1": 0.28036383092562867,
+          "false_alarms_per_min": 136.58132683530008,
+          "event_recall": 1.0,
+          "mean_delay_s": 5.057138068335397,
+          "median_delay_s": 1.1999990940093994
+        },
+        {
+          "threshold": 4.430846784537816,
+          "precision": 0.2413793103448276,
+          "recall": 0.3032178217821782,
+          "f1": 0.26878771256171147,
+          "false_alarms_per_min": 131.62405715041436,
+          "event_recall": 1.0,
+          "mean_delay_s": 5.071423768997192,
+          "median_delay_s": 1.1999990940093994
+        },
+        {
+          "threshold": 4.585619222436976,
+          "precision": 0.23243801652892562,
+          "recall": 0.2784653465346535,
+          "f1": 0.2533783783783784,
+          "false_alarms_per_min": 127.00866813345176,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.114279883248465,
+          "median_delay_s": 1.9999980926513672
+        },
+        {
+          "threshold": 4.740391660336136,
+          "precision": 0.2309322033898305,
+          "recall": 0.2698019801980198,
+          "f1": 0.24885844748858452,
+          "false_alarms_per_min": 124.10268245610496,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.271422590528216,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 4.895164098235296,
+          "precision": 0.22668112798264642,
+          "recall": 0.25866336633663367,
+          "f1": 0.2416184971098266,
+          "false_alarms_per_min": 121.88045811460445,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.271422590528216,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 5.049936536134456,
+          "precision": 0.2276243093922652,
+          "recall": 0.25495049504950495,
+          "f1": 0.24051371862230006,
+          "false_alarms_per_min": 119.48729343914238,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.271422590528216,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 5.204708974033616,
+          "precision": 0.2283464566929134,
+          "recall": 0.25123762376237624,
+          "f1": 0.23924572775486153,
+          "false_alarms_per_min": 117.26506909764187,
+          "event_recall": 1.0,
+          "mean_delay_s": 6.271422590528216,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 5.359481411932776,
+          "precision": 0.22106481481481483,
+          "recall": 0.23638613861386137,
+          "f1": 0.2284688995215311,
+          "false_alarms_per_min": 115.04284475614138,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 5.514253849831934,
+          "precision": 0.2189695550351288,
+          "recall": 0.23143564356435645,
+          "f1": 0.2250300842358604,
+          "false_alarms_per_min": 114.01720275237192,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 5.669026287731094,
+          "precision": 0.21284185493460167,
+          "recall": 0.22153465346534654,
+          "f1": 0.21710127349909034,
+          "false_alarms_per_min": 113.16250108256402,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 5.823798725630254,
+          "precision": 0.21008403361344538,
+          "recall": 0.21658415841584158,
+          "f1": 0.21328458257160268,
+          "false_alarms_per_min": 112.47873974671772,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 5.978571163529414,
+          "precision": 0.2067714631197098,
+          "recall": 0.21163366336633663,
+          "f1": 0.2091743119266055,
+          "false_alarms_per_min": 112.13685907879456,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 6.133343601428574,
+          "precision": 0.2048780487804878,
+          "recall": 0.2079207920792079,
+          "f1": 0.20638820638820637,
+          "false_alarms_per_min": 111.45309774294826,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 6.2881160393277336,
+          "precision": 0.2049079754601227,
+          "recall": 0.20668316831683167,
+          "f1": 0.2057917436845348,
+          "false_alarms_per_min": 110.76933640710195,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 6.442888477226892,
+          "precision": 0.2059186189889026,
+          "recall": 0.20668316831683167,
+          "f1": 0.20630018529956762,
+          "false_alarms_per_min": 110.08557507125563,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 6.597660915126052,
+          "precision": 0.20724094881398253,
+          "recall": 0.20544554455445543,
+          "f1": 0.20633934120571784,
+          "false_alarms_per_min": 108.54711206560144,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 6.752433353025212,
+          "precision": 0.20780856423173805,
+          "recall": 0.2042079207920792,
+          "f1": 0.20599250936329588,
+          "false_alarms_per_min": 107.52147006183198,
+          "event_recall": 1.0,
+          "mean_delay_s": 7.185707466942923,
+          "median_delay_s": 3.099997043609619
+        },
+        {
+          "threshold": 6.907205790924372,
+          "precision": 0.20584498094027953,
+          "recall": 0.2004950495049505,
+          "f1": 0.20313479623824449,
+          "false_alarms_per_min": 106.83770872598568,
+          "event_recall": 1.0,
+          "mean_delay_s": 9.07141992024013,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 7.0619782288235315,
+          "precision": 0.20512820512820512,
+          "recall": 0.19801980198019803,
+          "f1": 0.20151133501259447,
+          "false_alarms_per_min": 105.98300705617778,
+          "event_recall": 1.0,
+          "mean_delay_s": 9.07141992024013,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 7.2167506667226915,
+          "precision": 0.20671834625322996,
+          "recall": 0.19801980198019803,
+          "f1": 0.202275600505689,
+          "false_alarms_per_min": 104.95736505240832,
+          "event_recall": 1.0,
+          "mean_delay_s": 9.07141992024013,
+          "median_delay_s": 6.299993991851807
+        },
+        {
+          "threshold": 7.37152310462185,
+          "precision": 0.20887728459530025,
+          "recall": 0.19801980198019803,
+          "f1": 0.20330368487928843,
+          "false_alarms_per_min": 103.58984238071571,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.357132979801722,
+          "median_delay_s": 10.799989700317383
+        },
+        {
+          "threshold": 7.52629554252101,
+          "precision": 0.20969855832241152,
+          "recall": 0.19801980198019803,
+          "f1": 0.20369191597708464,
+          "false_alarms_per_min": 103.07702137883098,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.357132979801722,
+          "median_delay_s": 10.799989700317383
+        },
+        {
+          "threshold": 7.68106798042017,
+          "precision": 0.20816864295125165,
+          "recall": 0.19554455445544555,
+          "f1": 0.20165922144224632,
+          "false_alarms_per_min": 102.73514071090783,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.357132979801722,
+          "median_delay_s": 10.799989700317383
+        },
+        {
+          "threshold": 7.8358404183193295,
+          "precision": 0.2064343163538874,
+          "recall": 0.1905940594059406,
+          "f1": 0.1981981981981982,
+          "false_alarms_per_min": 101.19667770525363,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.385704381125313,
+          "median_delay_s": 10.899989604949951
+        },
+        {
+          "threshold": 7.9906128562184895,
+          "precision": 0.20810810810810812,
+          "recall": 0.1905940594059406,
+          "f1": 0.19896640826873382,
+          "false_alarms_per_min": 100.17103570148417,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.385704381125313,
+          "median_delay_s": 10.899989604949951
+        },
+        {
+          "threshold": 8.145385294117649,
+          "precision": 0.2079343365253078,
+          "recall": 0.18811881188118812,
+          "f1": 0.19753086419753088,
+          "false_alarms_per_min": 98.97445336375313,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.385704381125313,
+          "median_delay_s": 10.899989604949951
+        },
+        {
+          "threshold": 8.30015773201681,
+          "precision": 0.20943134535367544,
+          "recall": 0.18688118811881188,
+          "f1": 0.197514715500327,
+          "false_alarms_per_min": 97.43599035809893,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.385704381125313,
+          "median_delay_s": 10.899989604949951
+        },
+        {
+          "threshold": 8.454930169915968,
+          "precision": 0.21089385474860337,
+          "recall": 0.18688118811881188,
+          "f1": 0.19816272965879264,
+          "false_alarms_per_min": 96.58128868829105,
+          "event_recall": 1.0,
+          "mean_delay_s": 10.55713278906686,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 8.609702607815127,
+          "precision": 0.21306818181818182,
+          "recall": 0.18564356435643564,
+          "f1": 0.1984126984126984,
+          "false_alarms_per_min": 94.7009450147137,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.01427425657,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 8.764475045714288,
+          "precision": 0.2148997134670487,
+          "recall": 0.18564356435643564,
+          "f1": 0.199203187250996,
+          "false_alarms_per_min": 93.67530301094423,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.01427425657,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 8.919247483613447,
+          "precision": 0.21613832853025935,
+          "recall": 0.18564356435643564,
+          "f1": 0.19973368841544606,
+          "false_alarms_per_min": 92.99154167509793,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.01427425657,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 9.074019921512608,
+          "precision": 0.21865889212827988,
+          "recall": 0.18564356435643564,
+          "f1": 0.20080321285140562,
+          "false_alarms_per_min": 91.62401900340531,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.01427425657,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 9.228792359411766,
+          "precision": 0.22058823529411764,
+          "recall": 0.18564356435643564,
+          "f1": 0.20161290322580644,
+          "false_alarms_per_min": 90.59837699963585,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.01427425657,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 9.383564797310928,
+          "precision": 0.22388059701492538,
+          "recall": 0.18564356435643564,
+          "f1": 0.20297699594046006,
+          "false_alarms_per_min": 88.88897366002008,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.01427425657,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 9.538337235210086,
+          "precision": 0.22713414634146342,
+          "recall": 0.1844059405940594,
+          "f1": 0.20355191256830604,
+          "false_alarms_per_min": 86.66674931851958,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.028559957231794,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 9.693109673109248,
+          "precision": 0.2328125,
+          "recall": 0.1844059405940594,
+          "f1": 0.2058011049723757,
+          "false_alarms_per_min": 83.93170397513434,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.028559957231794,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 9.847882111008406,
+          "precision": 0.2380191693290735,
+          "recall": 0.1844059405940594,
+          "f1": 0.2078103207810321,
+          "false_alarms_per_min": 81.53853929967227,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.028559957231794,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 10.002654548907564,
+          "precision": 0.24466338259441708,
+          "recall": 0.1844059405940594,
+          "f1": 0.21030345800988004,
+          "false_alarms_per_min": 78.63255362232546,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.042845623833793,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 10.157426986806726,
+          "precision": 0.2547008547008547,
+          "recall": 0.1844059405940594,
+          "f1": 0.2139267767408471,
+          "false_alarms_per_min": 74.52998560724761,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.042845623833793,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 10.312199424705884,
+          "precision": 0.26534296028880866,
+          "recall": 0.18193069306930693,
+          "f1": 0.21585903083700442,
+          "false_alarms_per_min": 69.57271592236187,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.071417025157384,
+          "median_delay_s": 11.499989032745361
+        },
+        {
+          "threshold": 10.466971862605046,
+          "precision": 0.28007889546351084,
+          "recall": 0.17574257425742573,
+          "f1": 0.2159695817490494,
+          "false_alarms_per_min": 62.393221895975636,
+          "event_recall": 1.0,
+          "mean_delay_s": 12.128559827804565,
+          "median_delay_s": 11.59998893737793
+        },
+        {
+          "threshold": 10.621744300504204,
+          "precision": 0.2980561555075594,
+          "recall": 0.1707920792079208,
+          "f1": 0.21715184893784423,
+          "false_alarms_per_min": 55.55560853751255,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.542842285973686,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 10.776516738403366,
+          "precision": 0.33014354066985646,
+          "recall": 0.1707920792079208,
+          "f1": 0.22512234910277326,
+          "false_alarms_per_min": 47.86329350924158,
+          "event_recall": 1.0,
+          "mean_delay_s": 15.642842190606254,
+          "median_delay_s": 13.299987077713013
+        },
+        {
+          "threshold": 10.931289176302524,
+          "precision": 0.3605263157894737,
+          "recall": 0.16955445544554457,
+          "f1": 0.23063973063973064,
+          "false_alarms_per_min": 41.53850115266323,
+          "event_recall": 1.0,
+          "mean_delay_s": 16.428555761064803,
+          "median_delay_s": 13.99998664855957
+        },
+        {
+          "threshold": 11.086061614201682,
+          "precision": 0.37815126050420167,
+          "recall": 0.1670792079207921,
+          "f1": 0.23175965665236054,
+          "false_alarms_per_min": 37.94875413947011,
+          "event_recall": 1.0,
+          "mean_delay_s": 16.557127169200353,
+          "median_delay_s": 14.199986696243286
+        },
+        {
+          "threshold": 11.240834052100844,
+          "precision": 0.41935483870967744,
+          "recall": 0.1608910891089109,
+          "f1": 0.23255813953488375,
+          "false_alarms_per_min": 30.769260113083874,
+          "event_recall": 1.0,
+          "mean_delay_s": 23.742834499904088,
+          "median_delay_s": 26.999974489212036
+        },
+        {
+          "threshold": 11.39560649,
+          "precision": 0.3181818181818182,
+          "recall": 0.017326732673267328,
+          "f1": 0.03286384976525822,
+          "false_alarms_per_min": 5.128210018847312,
+          "event_recall": 0.7142857142857143,
+          "mean_delay_s": 45.79995632171631,
+          "median_delay_s": 64.09993886947632
+        }
+      ]
+    }
+  }
+}

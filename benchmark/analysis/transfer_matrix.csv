@@ -1,0 +1,17 @@
+run,train_domain,test_domain,method,auroc,auprc
+train_gravel_test_gravel,gravel,gravel,gnn,0.4299424156065458,0.16786963380942305
+train_gravel_test_gravel,gravel,gravel,msvdd,0.6526399114270401,0.2683957554011907
+train_gravel_test_gravel,gravel,gravel,ae,0.7670118614425544,0.3208819891544695
+train_gravel_test_gravel,gravel,gravel,svm,0.6971115060223971,0.308940837255541
+train_gravel_test_tarmac,gravel,tarmac,gnn,0.3100061670543332,0.5198241230972627
+train_gravel_test_tarmac,gravel,tarmac,msvdd,0.5343141786822379,0.5758545320388602
+train_gravel_test_tarmac,gravel,tarmac,ae,0.5482077414917182,0.6008353798566026
+train_gravel_test_tarmac,gravel,tarmac,svm,0.48899830999249294,0.5536359821195032
+train_tarmac_test_tarmac,tarmac,tarmac,gnn,0.3627466214739746,0.5537709245006666
+train_tarmac_test_tarmac,tarmac,tarmac,msvdd,0.4953404607027029,0.5766280933959771
+train_tarmac_test_tarmac,tarmac,tarmac,ae,0.633251729761513,0.6925404887129732
+train_tarmac_test_tarmac,tarmac,tarmac,svm,0.6248109373439886,0.6871761337347317
+train_tarmac_test_gravel,tarmac,gravel,gnn,0.38501722390339926,0.15750870601971112
+train_tarmac_test_gravel,tarmac,gravel,msvdd,0.39533370003667034,0.15905871446380396
+train_tarmac_test_gravel,tarmac,gravel,ae,0.3634104115539759,0.13996090969192876
+train_tarmac_test_gravel,tarmac,gravel,svm,0.3416874700290542,0.136350128381077

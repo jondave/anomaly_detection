@@ -1,0 +1,114 @@
+{
+  "sample_rate_hz": 10.0,
+  "feature_window_size": 10,
+  "gnn_score_mode": "next_step",
+  "device": "cpu",
+  "bags": [
+    {
+      "bag_path": "normal_operation/rosbag2_2026_02_26-10_52_05",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/normal_operation/rosbag2_2026_02_26-10_52_05",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1772103134.9190612,
+      "bag_end_time_abs": 1772103310.9188933,
+      "duration_sec": 175.9998321533203,
+      "num_rows": 1761,
+      "num_labeled_rows": 0
+    },
+    {
+      "bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/normal_operation/rosbag2_2026_02_26-11_15_46",
+      "error": "Error reading SQL query. SQLite error (11): database disk image is malformed"
+    },
+    {
+      "bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/normal_operation/rosbag2_2026_03_10-10_03_41",
+      "error": "Error reading SQL query. SQLite error (11): database disk image is malformed"
+    },
+    {
+      "bag_path": "estop_push_robot/rosbag2_2026_03_10-10_38_36",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/estop_push_robot/rosbag2_2026_03_10-10_38_36",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773139124.429948,
+      "bag_end_time_abs": 1773139166.0299084,
+      "duration_sec": 41.59996032714844,
+      "num_rows": 417,
+      "num_labeled_rows": 181
+    },
+    {
+      "bag_path": "estop_push_robot/rosbag2_2026_03_10-10_39_34",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/estop_push_robot/rosbag2_2026_03_10-10_39_34",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773139180.5854404,
+      "bag_end_time_abs": 1773139209.8854125,
+      "duration_sec": 29.29997205734253,
+      "num_rows": 294,
+      "num_labeled_rows": 171
+    },
+    {
+      "bag_path": "cover_lidar/rosbag2_2026_03_10-10_43_39",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/cover_lidar/rosbag2_2026_03_10-10_43_39",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773139425.160341,
+      "bag_end_time_abs": 1773139448.0603192,
+      "duration_sec": 22.899978160858154,
+      "num_rows": 230,
+      "num_labeled_rows": 125
+    },
+    {
+      "bag_path": "cover_lidar/rosbag2_2026_03_10-10_45_15",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/cover_lidar/rosbag2_2026_03_10-10_45_15",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773139518.1579306,
+      "bag_end_time_abs": 1773139536.2579134,
+      "duration_sec": 18.099982738494873,
+      "num_rows": 182,
+      "num_labeled_rows": 0
+    },
+    {
+      "bag_path": "cover_lidar/rosbag2_2026_03_10-10_45_45",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/cover_lidar/rosbag2_2026_03_10-10_45_45",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773139560.690661,
+      "bag_end_time_abs": 1773139596.7906265,
+      "duration_sec": 36.09996557235718,
+      "num_rows": 362,
+      "num_labeled_rows": 0
+    },
+    {
+      "bag_path": "crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+      "absolute_bag_path": "/home/jcox/ros2_ws/src/anomaly_detection/rosbags/hunter_rosbags/gravel/crash_into_object_emergency_stop/rosbag2_2026_03_10-10_29_35",
+      "selected_topics": {
+        "cmd": "/cmd_vel",
+        "imu": "/imu/data_fused",
+        "odom": "/odometry/local"
+      },
+      "bag_start_time_abs": 1773138579.7593818,
+      "bag_end_time_abs": 1773138686.8592796,
+      "duration_sec": 107.09989786148071,
+      "num_rows": 1072,
+      "num_labeled_rows": 331
+    }
+  ]
+}
